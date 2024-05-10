@@ -1,35 +1,16 @@
-// 
+//
 // Typography
-// 
+//
 
-// Override Bootstrap typography variables
+// Override Bootstrap typography variables (Geometric Humanist)
 
-$font-family-base: "Nunito",
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-"Noto Color Emoji";
-
+$font-family-base: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+  sans-serif;
+$headings-font-family: Didot, "Bodoni MT", "Noto Serif Display",
+  "URW Palladio L", P052, Sylfaen, serif;
 $base-letter-spacing: 0.0625em;
 
-// Custom font family for masthead H1
+// Custom font for masthead
 
-$font-family-special: "Varela Round",
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-"Noto Color Emoji";
+$font-family-decorative: "Parisienne", "Segoe Print", "Bradley Hand", Chilanka,
+  TSCu_Comic, casual, cursive;
