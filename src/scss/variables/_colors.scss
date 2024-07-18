@@ -20,19 +20,19 @@ $black: #000;
 
 // Colors
 
-$teal: #64a19d;
-$red: #a16468;
-$purple: #7464a1;
-$yellow: #e4c662;
-$green: #67c29c;
-$cyan: #1cabc4;
+$dblue: #184e73;
+$gold: #85461E;
+$lblue: #81adc8;
+$yellow: #faff81;
+$red: #5B2333;
+$green: #50723C;
 
 // State colors
 
-$primary: $teal;
-$secondary: $purple;
+$primary: $dblue;
+$secondary: $gold;
 $success: $green;
-$info: $cyan;
+$info: $lblue;
 $warning: $yellow;
 $danger: $red;
 $light: $gray-100;
@@ -57,6 +57,9 @@ $expanded-colors: ('black': $black,
 
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $expanded-colors);
+
+// Override new colors
+$body-emphasis-color: adjust-color($secondary, $lightness: -10%);
 
 // Override Bootstrap contrast ratio
 

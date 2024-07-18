@@ -1,0 +1,14 @@
+$paper-images: cream-paper, handmade-paper, paper-fibers;
+
+@each $paper in $paper-images {
+  .bg-#{$paper} {
+    background-image: url("../assets/img/#{$paper}.png") !important;
+    background-position: center;
+    background-attachment: local;
+  }
+}
+
+.cutout-text {
+  color: #fff;
+  mix-blend-mode: multiply;
+}

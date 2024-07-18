@@ -21,74 +21,69 @@ html(lang='en')
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
-    body#page-top
+    body.bg-white.bg-cream-paper#page-top
 
         // Navigation
-        nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+        nav#mainNav.navbar.navbar-expand-lg.border-bottom.border-secondary-subtle
             .container.px-4.px-lg-5
                 a.navbar-brand(href='#page-top') Start Bootstrap
                 button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-                    | Menu
-                    i.fas.fa-bars
+                    span.navbar-toggler-icon
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto
                         li.nav-item
-                            a.nav-link(href='#about') About
+                            a.nav-link(href='#venue') Venue
                         li.nav-item
-                            a.nav-link(href='#venue') Projects
+                            a.nav-link(href='#schedule') Schedule
                         li.nav-item
-                            a.nav-link(href='#signup') Contact
+                            a.nav-link(href='#contact') Contact
 
         // Masthead
-        header.masthead.text-light
+        header.masthead.text-secondary
             .container.px-4.px-lg-5.d-flex.h-100.align-items-center.justify-content-center
                 .d-flex.justify-content-center.flex-column
                     .text-center.my-2
-                        h1.mx-auto Matthew &amp; Maria
-                        h2.mx-auto are getting married on
+                        h1.mx-auto Matthew &amp; Maria 
+                        h2.mx-auto are getting married on 
                             time(datetime='2025-07-26 18:00:00-0300') July 26, 2025
-                            | in 
+                            |  in 
                             data(title='Rosewood São Paulo' value='R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil') São&nbsp;Paulo, Brazil
                     #countdown.d-flex.flex-row.justify-content-center.flex-wrap.my-4(data-countdown-date='2025-07-26 18:00:00-0300')
-                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-light.text-dark.rounded
+                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                             span.countdown-number(aria-labelledby='label-days', data-countdown-unit='days') 00
                             span.countdown-unit(name='label-days') days
-                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-light.text-dark.rounded
+                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                             span.countdown-number(aria-labelledby='label-hours', data-countdown-unit='hours') 00
                             span.countdown-unit(name='label-hours') hours
-                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-light.text-dark.rounded
+                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                             span.countdown-number(aria-labelledby='label-minutes', data-countdown-unit='minutes') 00
                             span.countdown-unit(name='label-minutes') minutes
-                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-light.text-dark.rounded
+                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                             span.countdown-number(aria-labelledby='label-seconds', data-countdown-unit='seconds') 00
                             span.countdown-unit(name='label-seconds') seconds
-                    a.mx-auto.btn.btn-primary(href='#about') RSVP Now
-
-        // About
-        section#about.about-section.text-center
-            .container.px-4.px-lg-5
-                .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-8
-                        h2.text-white.mb-4 Built with Bootstrap 5
-                        p.text-white-50
-                            | Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on 
-                            a(href='https://startbootstrap.com/theme/grayscale/') the preview page.
-                            | The theme is open source, and you can use it for any purpose, personal or commercial.
-                img.img-fluid(src='assets/img/ipad.png', alt='...')
+                    a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='#about') RSVP Now
 
         // Venue and Accommodations
-        section#venue.venue-section.bg-light
+        section#venue.venue-section.bg-light.bg-handmade-paper.shadow
             .container.px-4.px-lg-5
+                h3 Venue &amp; Accommodations
+
                 // Featured Project Row
-                .row.gx-0.mb-4.mb-lg-5.align-items-center
+                .row.gx-0.my-4.mb-lg-5.align-items-center
                     .col-xl-8.col-lg-7
                         img.img-fluid.mb-3.mb-lg-0(src='assets/img/bg-masthead.jpg', alt='...')
                     .col-xl-4.col-lg-5
                         .featured-text.text-center.text-lg-left
-                            h4 Shoreline
-                            p.text-black-50.mb-0
-                                | Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial venue! Download it, customize it, and publish your website!
-                // Project One Row
+                            h4 Main Venue
+                            p The wedding will be hosted at the historic Rosewood São Paulo. It is just off Avenue Paulista in the center of the city.
+                            p 
+                                a(href='#') You can book at our negotiated rates here using group code
+                                | 
+                                code FWEDDING
+                                | .
+                            p
+                                strong Address:
+                                |  R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil.
                 .row.gx-0.mb-5.mb-lg-0.justify-content-center
                     .col-lg-6
                         img.img-fluid(src='assets/img/demo-image-01.jpg', alt='...')
@@ -110,6 +105,17 @@ html(lang='en')
                                     h4.text-white Mountains
                                     p.mb-0.text-white-50
                                         | Another example of a project with its respective description. These sections work well responsively as well!
+
+        // Schedule
+        section#schedule.schedule-section.py-5.text-center.bg-primary.bg-paper-fibers.text-white.shadow
+            .container.px-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8
+                        h2.mb-4 Built with Bootstrap 5
+                        p
+                            | Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on 
+                            a(href='https://startbootstrap.com/theme/grayscale/') the preview page.
+                            | The theme is open source, and you can use it for any purpose, personal or commercial.
 
         // Signup
         section#signup.signup-section
