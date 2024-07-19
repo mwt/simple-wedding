@@ -12,3 +12,18 @@ $paper-images: cream-paper, handmade-paper, paper-fibers;
   color: #fff;
   mix-blend-mode: multiply;
 }
+
+// Force z-index to correct for stacking glitch
+$num-sections: 5;
+
+body > header {
+  position: relative;
+  z-index: $num-sections + 1;
+}
+
+@for $i from 1 through ($num-sections + 1) {
+  body > section:nth-of-type(#{$i}) {
+    position: relative;
+    z-index: $num-sections + 1 - $i;
+  }
+}

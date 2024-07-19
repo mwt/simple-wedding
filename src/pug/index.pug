@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='en').bg-light
 
     head
 
@@ -12,9 +12,6 @@ html(lang='en')
 
         link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
-        // Font Awesome icons (free version)
-        script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
-
         // Google fonts
         link(href='https://fonts.googleapis.com/css2?family=Parisienne&display=swap', rel='stylesheet')
 
@@ -24,7 +21,7 @@ html(lang='en')
     body.bg-white.bg-cream-paper#page-top
 
         // Navigation
-        nav#mainNav.navbar.navbar-expand-lg.border-bottom.border-secondary-subtle
+        nav#mainNav.navbar.navbar-expand-lg.shadow-sm
             .container.px-4.px-lg-5
                 a.navbar-brand(href='#page-top') Start Bootstrap
                 button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
@@ -39,177 +36,146 @@ html(lang='en')
                             a.nav-link(href='#contact') Contact
 
         // Masthead
-        header.masthead.text-secondary
-            .container.px-4.px-lg-5.d-flex.h-100.align-items-center.justify-content-center
-                .d-flex.justify-content-center.flex-column
-                    .text-center.my-2
-                        h1.mx-auto Matthew &amp; Maria 
-                        h2.mx-auto are getting married on 
-                            time(datetime='2025-07-26 18:00:00-0300') July 26, 2025
-                            |  in 
-                            data(title='Rosewood São Paulo' value='R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil') São&nbsp;Paulo, Brazil
-                    #countdown.d-flex.flex-row.justify-content-center.flex-wrap.my-4(data-countdown-date='2025-07-26 18:00:00-0300')
-                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
-                            span.countdown-number(aria-labelledby='label-days', data-countdown-unit='days') 00
-                            span.countdown-unit(name='label-days') days
-                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
-                            span.countdown-number(aria-labelledby='label-hours', data-countdown-unit='hours') 00
-                            span.countdown-unit(name='label-hours') hours
-                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
-                            span.countdown-number(aria-labelledby='label-minutes', data-countdown-unit='minutes') 00
-                            span.countdown-unit(name='label-minutes') minutes
-                        .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
-                            span.countdown-number(aria-labelledby='label-seconds', data-countdown-unit='seconds') 00
-                            span.countdown-unit(name='label-seconds') seconds
-                    a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='#about') RSVP Now
+        header.masthead.d-flex.flex-row.align-items-center.text-secondary.border-top.border-bottom.border-secondary-subtle.shadow-sm
+            .container.px-4.px-lg-5.d-flex.align-items-center.flex-column
+                h1.text-center Matthew &amp; Maria 
+                h2.text-center are getting married on 
+                    time(datetime='2025-07-26 18:00:00-0300') July 26, 2025
+                    |  in 
+                    data(title='Rosewood São Paulo' value='R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil') São&nbsp;Paulo, Brazil
+                #countdown.d-flex.flex-row.justify-content-center.flex-wrap.my-4(data-countdown-date='2025-07-26 18:00:00-0300')
+                    .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
+                        span.countdown-number(aria-labelledby='label-days', data-countdown-unit='days') 00
+                        span.countdown-unit(name='label-days') days
+                    .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
+                        span.countdown-number(aria-labelledby='label-hours', data-countdown-unit='hours') 00
+                        span.countdown-unit(name='label-hours') hours
+                    .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
+                        span.countdown-number(aria-labelledby='label-minutes', data-countdown-unit='minutes') 00
+                        span.countdown-unit(name='label-minutes') minutes
+                    .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
+                        span.countdown-number(aria-labelledby='label-seconds', data-countdown-unit='seconds') 00
+                        span.countdown-unit(name='label-seconds') seconds
+                a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='#about') RSVP Now
 
         // Venue and Accommodations
-        section#venue.venue-section.bg-light.bg-handmade-paper.shadow
+        section#venue.venue-section.bg-light.bg-handmade-paper.shadow-sm
             .container.px-4.px-lg-5
                 h3 Venue &amp; Accommodations
 
                 // Featured Project Row
                 .row.gx-0.my-4.mb-lg-5.align-items-center
                     .col-xl-8.col-lg-7
-                        img.img-fluid.mb-3.mb-lg-0(src='assets/img/bg-masthead.jpg', alt='...')
+                        img.img-fluid.mb-3.mb-lg-0(src='assets/img/rosewood1.jpg', alt='Chapel at Rosewood São Paulo' loading='lazy')
                     .col-xl-4.col-lg-5
                         .featured-text.text-center.text-lg-left
                             h4 Main Venue
-                            p The wedding will be hosted at the historic Rosewood São Paulo. It is just off Avenue Paulista in the center of the city.
                             p 
-                                a(href='#') You can book at our negotiated rates here using group code
+                                | The ROSEWOOD SÃO PAULO HOTEL is centrally located within the Cidade Matarazzo complex -- just off Avenida Paulista and its numerous cultural attractions and shopping. The ceremony and reception will both take place within the hotel's property. 
+                                a(href='#') Guests can get a 12% discount and free breakfast when booking here using group code
                                 | 
                                 code FWEDDING
                                 | .
                             p
-                                strong Address:
-                                |  R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil.
+                                strong.text-uppercase Address:
+                                | 
+                                a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil
                 .row.gx-0.mb-5.mb-lg-0.justify-content-center
                     .col-lg-6
                         img.img-fluid(src='assets/img/demo-image-01.jpg', alt='...')
                     .col-lg-6
-                        .bg-black.text-center.h-100.venue
+                        .text-center.h-100.venue
                             .d-flex.h-100
                                 .venue-text.w-100.my-auto.text-center.text-lg-left
-                                    h4.text-white Misty
-                                    p.mb-0.text-white-50
-                                        | An example of where you can put an image of a project, or anything else, along with a description.
+                                    h4 Other Accommodations
+                                    p.mb-0
+                                        | Coming Soon!
                 // Project Two Row
                 .row.gx-0.justify-content-center
                     .col-lg-6
                         img.img-fluid(src='assets/img/demo-image-02.jpg', alt='...')
                     .col-lg-6.order-lg-first
-                        .bg-black.text-center.h-100.venue
+                        .text-center.h-100.venue
                             .d-flex.h-100
                                 .venue-text.w-100.my-auto.text-center.text-lg-right
-                                    h4.text-white Mountains
-                                    p.mb-0.text-white-50
-                                        | Another example of a project with its respective description. These sections work well responsively as well!
+                                    h4 Other Accommodations
+                                    p.mb-0
+                                        | Coming Soon!
 
         // Schedule
-        section#schedule.schedule-section.py-5.text-center.bg-primary.bg-paper-fibers.text-white.shadow
-            .container.px-4.px-lg-5
+        section#schedule.schedule-section.py-5.text-center.shadow-sm
+            .container.p-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8
-                        h2.mb-4 Built with Bootstrap 5
-                        p
-                            | Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on 
-                            a(href='https://startbootstrap.com/theme/grayscale/') the preview page.
-                            | The theme is open source, and you can use it for any purpose, personal or commercial.
+                        h2.mb-4 Schedule and Getting There
+                        p 
+                            | The ceremony will begin promptly on 
+                            time(datetime='2025-07-26 18:00:00-0300').fw-bold July 26 at 7pm
+                            |  in the Santa Luzia chapel, located in the Rosewood Sao Paulo complex.
+                        p 
+                            strong.text-uppercase Address:
+                            | 
+                            a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Alameda Rio Claro, 40 - Bela Vista, São Paulo - SP, 01332-010, Brazil
+                        p Reception to follow immediately after the ceremony, at the Filomena Cucina event space also located in the Rosewood Sao Paulo.
+                        p 
+                            strong.text-uppercase Address:
+                            | 
+                            a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil
+                        p Parking/valet services available. Uber/taxi recommended.
+                        p 
+                            strong.text-uppercase Dress code:
+                            |  Formal
+                        hr.text-primary
+                        p We recommend selecting a direct flight from one of the major U.S. cities like New York (JFK/EWR), Miami (MIA), Los Angeles (LAX), Chicago (ORD), or DC (IAD) to São Paulo's Guarulhos International Airport (GRU). Flights from Miami are often cheaper than from other cities. #[a(href="https://www.google.com/travel/flights?q=Flights%20to%20GRU%20on%202025-07-23%20through%202025-07-30" target="_blank") Booking through travel websites like Google Flights can help you find the best fares].
+                        p  Direct flights from most cities in the United States to São Paulo take approximately 8-12 hours.
+                        p Ensure your passport is valid and check if a visa is required for your travel. #[strong American citizens do not need a travel visa.]
+                img.my-5.img-fluid(src='assets/img/cbird1.png', alt='Decorative image of two birds perched on a floral arrangement' loading='lazy')
 
-        // Signup
-        section#signup.signup-section
-            .container.px-4.px-lg-5
-                .row.gx-4.gx-lg-5
-                    .col-md-10.col-lg-8.mx-auto.text-center
-                        i.far.fa-paper-plane.fa-2x.mb-2.text-white
-                        h2.text-white.mb-5 Subscribe to receive updates!
-
-                        // * * * * * * * * * * * * * * *
-                        // * * SB Forms Contact Form * *
-                        // * * * * * * * * * * * * * * *
-
-                        // This form is pre-integrated with SB Forms.
-                        // To make this form functional, sign up at
-                        // https://startbootstrap.com/solution/contact-forms
-                        // to get an API token!
-                        
-                        form#contactForm.form-signup(data-sb-form-api-token='API_TOKEN')
-
-                            // Email address input
-
-                            .row.input-group-newsletter
-                                .col
-                                    input#emailAddress.form-control(
-                                        type='email',
-                                        placeholder='Enter email address...',
-                                        aria-label='Enter email address...',
-                                        data-sb-validations='required,email'
-                                    )
-                                .col-auto
-                                    button#submitButton.btn.btn-primary.disabled(type='submit') Notify Me!
-                            .invalid-feedback.mt-2(data-sb-feedback='emailAddress:required')
-                                | An email is required.
-                            .invalid-feedback.mt-2(data-sb-feedback='emailAddress:email')
-                                | Email is not valid.
-
-                            // Submit success message
-                            //
-                            // This is what your users will see when the form
-                            // has successfully submitted
-
-                            #submitSuccessMessage.d-none
-                                .text-center.mb-3.mt-2.text-white
-                                    .fw-bolder Form submission successful!
-                                    | To activate this form, sign up at
-                                    br
-                                    a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
-
-                            // Submit error message
-                            //
-                            // This is what your users will see when there is
-                            // an error submitting the form
-
-                            #submitErrorMessage.d-none
-                                .text-center.text-danger.mb-3.mt-2 Error sending message!
+        // Registry
+        section.registry-section.bg-primary.bg-paper-fibers.shadow
+            .container.p-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.text-center.text-white
+                        h2.mb-4 Registry
+                        p 
+                            | We are registered at 
+                            a(href='https://www.zola.com/registry/mattandmaria').text-white Zola
+                            |  and 
+                            a(href='https://www.amazon.com/wedding/matthewandmaria').text-white Amazon
+                            | . 
+                            | Your presence at our wedding is the greatest gift of all, but if you would like to help us celebrate with a gift, we have selected a few items that we would love to have in our home. 
+                            | Thank you for your love and support!
+                        a.btn.btn-warning.fw-bold.bg-paper-fibers(href='https://www.zola.com/registry/mattandmaria') View Our Registry
 
         // Contact
-        section.contact-section.bg-black
-            .container.px-4.px-lg-5
+        section.contact-section.shadow-sm#contact
+            .container.p-4.pb-5.px-lg-5
                 .row.gx-4.gx-lg-5
                     .col-md-4.mb-3.mb-md-0
                         .card.py-4.h-100
                             .card-body.text-center
-                                i.fas.fa-map-marked-alt.text-primary.mb-2
                                 h4.text-uppercase.m-0 Address
                                 hr.my-4.mx-auto
-                                .small.text-black-50 4923 Market Street, Orlando FL
+                                .small.text-black-50
+                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Capela Santa Luzia, São Paulo, Brazil
                     .col-md-4.mb-3.mb-md-0
                         .card.py-4.h-100
                             .card-body.text-center
-                                i.fas.fa-envelope.text-primary.mb-2
                                 h4.text-uppercase.m-0 Email
                                 hr.my-4.mx-auto
                                 .small.text-black-50
-                                    a(href='#!') hello@yourdomain.com
+                                    a(href='mailto:hello@matthewandmaria.com') hello@matthewandmaria.com
                     .col-md-4.mb-3.mb-md-0
                         .card.py-4.h-100
                             .card-body.text-center
-                                i.fas.fa-mobile-alt.text-primary.mb-2
-                                h4.text-uppercase.m-0 Phone
+                                h4.text-uppercase.m-0 Phone/WhatsApp
                                 hr.my-4.mx-auto
-                                .small.text-black-50 +1 (555) 902-8832
-                .social.d-flex.justify-content-center
-                    a.mx-2(href='#!')
-                        i.fab.fa-twitter
-                    a.mx-2(href='#!')
-                        i.fab.fa-facebook-f
-                    a.mx-2(href='#!')
-                        i.fab.fa-github
+                                .small.text-black-50 
+                                    a(href='tel:+16464910173') +1 (646) 491-0173
 
         // Footer
-        footer.footer.bg-black.small.text-center.text-white-50
-            .container.px-4.px-lg-5
+        footer.footer.small.text-center.shadow-sm
+            .container.p-4.px-lg-5
                 | Copyright &copy; Your Website 2023
 
         // Bootstrap core JS

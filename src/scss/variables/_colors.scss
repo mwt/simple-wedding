@@ -1,6 +1,6 @@
 //
 // Colors
-// 
+//
 
 // Color system
 
@@ -21,17 +21,17 @@ $black: #000;
 // Colors
 
 $dblue: #184e73;
-$gold: #85461E;
+$gold: #765c35;
 $lblue: #81adc8;
-$yellow: #faff81;
-$red: #5B2333;
-$green: #50723C;
+$yellow: #d4b844;
+$red: #5b2333;
+$green: #5a5f30;
 
 // State colors
 
-$primary: $dblue;
+$primary: $green;
 $secondary: $gold;
-$success: $green;
+$success: $dblue;
 $info: $lblue;
 $warning: $yellow;
 $danger: $red;
@@ -40,19 +40,22 @@ $dark: $gray-900;
 
 // Bootstrap color map
 
-$theme-colors: ("primary": $primary,
-    "secondary": $secondary,
-    "success": $success,
-    "info": $info,
-    "warning": $warning,
-    "danger": $danger,
-    "light": $light,
-    "dark": $dark);
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
 
 // Expanded color map
 
-$expanded-colors: ('black': $black,
-    'white': $white,
+$expanded-colors: (
+  "black": $black,
+  "white": $white,
 );
 
 // Merge the maps

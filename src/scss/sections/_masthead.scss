@@ -3,13 +3,15 @@
 //
 
 .masthead {
-  position: relative;
   width: 100%;
-  height: auto;
-  min-height: 35rem;
+  min-height: 800px;
   padding: 15rem 0;
+  background: url('../assets/img/card4.png') center top;
+  background-size: 1600px;
+  background-repeat: no-repeat;
 
   h1 {
+    margin-top: 100px;
     font-size: 2.5rem;
     text-align: start;
     font-family: $font-family-decorative;
@@ -29,12 +31,10 @@
   #countdown {
     .countdown-number {
       font-size: 1.5rem;
-      font-weight: 700;
     }
 
     .countdown-unit {
       font-size: 0.65rem;
-      font-weight: 700;
     }
   }
 
@@ -46,21 +46,20 @@
     #countdown {
       .countdown-number {
         font-size: 3.3rem;
-        font-weight: 700;
       }
 
       .countdown-unit {
         font-size: 0.85rem;
-        font-weight: 700;
       }
     }
   }
 
   @include media-breakpoint-up(lg) {
-    height: 100vh;
+    min-height: 1142px;
     padding: 0;
 
     h1 {
+      margin-top: 0;
       font-size: 6.5rem;
     }
 
@@ -72,12 +71,10 @@
     #countdown {
       .countdown-number {
         font-size: 5rem;
-        font-weight: 700;
       }
 
       .countdown-unit {
         font-size: 1.3rem;
-        font-weight: 700;
       }
     }
   }
