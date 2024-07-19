@@ -1,4 +1,4 @@
-$paper-images: cream-paper, handmade-paper, paper-fibers;
+$paper-images: cream-paper, handmade-paper, paper-fibers, spattern2;
 
 @each $paper in $paper-images {
   .bg-#{$paper} {

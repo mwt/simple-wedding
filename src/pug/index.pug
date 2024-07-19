@@ -33,10 +33,12 @@ html(lang='en').bg-light
                         li.nav-item
                             a.nav-link(href='#schedule') Schedule
                         li.nav-item
+                            a.nav-link(href='#registry') Registry
+                        li.nav-item
                             a.nav-link(href='#contact') Contact
 
         // Masthead
-        header.masthead.d-flex.flex-row.align-items-center.text-secondary.bg-white.bg-cream-paper.border-top.border-bottom.border-secondary-subtle.shadow-sm
+        header.masthead.d-flex.flex-row.align-items-center.text-secondary.bg-light.bg-cream-paper.border-top.border-bottom.border-secondary-subtle.shadow-sm
             // fixed object that takes 100% of the parent
             .position-absolute.w-100.h-100#masthead-bg
             .container.px-4.px-lg-5.d-flex.align-items-center.flex-column
@@ -63,9 +65,13 @@ html(lang='en').bg-light
         // Venue and Accommodations
         section#venue.venue-section.bg-light.bg-handmade-paper.shadow-sm
             .container.px-4.px-lg-5
-                h3 Venue &amp; Accommodations
 
-                // Featured Project Row
+                // Title
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.text-center
+                        h2.mb-4 Venue &amp; Accommodations
+
+                // Featured Venue Row
                 .row.gx-0.my-4.mb-lg-5.align-items-center
                     .col-xl-8.col-lg-7
                         img.img-fluid.mb-3.mb-lg-0(src='assets/img/rosewood1.jpg', alt='Chapel at Rosewood São Paulo' loading='lazy')
@@ -78,10 +84,13 @@ html(lang='en').bg-light
                                 | 
                                 code FWEDDING
                                 | .
-                            p
-                                strong.text-uppercase Address:
-                                | 
-                                a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil
+                            address
+                                p
+                                    strong.text-uppercase Address:
+                                    | 
+                                    a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76')
+                                        | R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil
+                // Venue One Row
                 .row.gx-0.mb-5.mb-lg-0.justify-content-center
                     .col-lg-6
                         img.img-fluid(src='assets/img/demo-image-01.jpg', alt='...')
@@ -92,7 +101,7 @@ html(lang='en').bg-light
                                     h4 Other Accommodations
                                     p.mb-0
                                         | Coming Soon!
-                // Project Two Row
+                // Venue Two Row
                 .row.gx-0.justify-content-center
                     .col-lg-6
                         img.img-fluid(src='assets/img/demo-image-02.jpg', alt='...')
@@ -114,15 +123,17 @@ html(lang='en').bg-light
                             | The ceremony will begin promptly on 
                             time(datetime='2025-07-26 18:00:00-0300').fw-bold July 26 at 7pm
                             |  in the Santa Luzia chapel, located in the Rosewood Sao Paulo complex.
-                        p 
-                            strong.text-uppercase Address:
-                            | 
-                            a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Alameda Rio Claro, 40 - Bela Vista, São Paulo - SP, 01332-010, Brazil
+                        address
+                            p 
+                                strong.text-uppercase Address: 
+                                | 
+                                a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Capela Santa Luzia, São Paulo, Brazil
                         p Reception to follow immediately after the ceremony, at the Filomena Cucina event space also located in the Rosewood Sao Paulo.
-                        p 
-                            strong.text-uppercase Address:
-                            | 
-                            a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil
+                        address
+                            p 
+                                strong.text-uppercase Address:
+                                | 
+                                a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil
                         p Parking/valet services available. Uber/taxi recommended.
                         p 
                             strong.text-uppercase Dress code:
@@ -134,55 +145,64 @@ html(lang='en').bg-light
                 img.my-5.img-fluid(src='assets/img/cbird1.png', alt='Decorative image of two birds perched on a floral arrangement' loading='lazy')
 
         // Registry
-        section.registry-section.bg-primary.bg-paper-fibers.shadow
+        section.registry-section.bg-primary.bg-paper-fibers.shadow#registry
             .container.p-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8.text-center.text-white
                         h2.mb-4 Registry
                         p 
-                            | We have not yet set up our registry. Please check back later.
+                            strong We have not yet set up our registry. Please check back later.
                         a.btn.btn-warning.fw-bold.bg-paper-fibers.disabled(href='#' role="button" aria-disabled="true") View Our Registry
 
-        // Contact
-        section.contact-section.shadow-sm#contact
-            .container.p-4.pb-5.px-lg-5
-                .row.gx-4.gx-lg-5
-                    .col-md-4.mb-3.mb-md-0
-                        .card.py-4.h-100
-                            .card-body.text-center
-                                h4.text-uppercase.m-0 Address
-                                hr.my-4.mx-auto
-                                .small.text-black-50
-                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Capela Santa Luzia, São Paulo, Brazil
-                    .col-md-4.mb-3.mb-md-0
-                        .card.py-4.h-100
-                            .card-body.text-center
-                                h4.text-uppercase.m-0 Email
-                                hr.my-4.mx-auto
-                                .small.text-black-50
-                                    a(href='mailto:hello@matthewandmaria.com') hello@matthewandmaria.com
-                    .col-md-4.mb-3.mb-md-0
-                        .card.py-4.h-100
-                            .card-body.text-center
-                                h4.text-uppercase.m-0 Phone/WhatsApp
-                                hr.my-4.mx-auto
-                                .small.text-black-50 
-                                    a(href='tel:+16464910173') +1 (646) 491-0173
-
-        // Footer
-        footer.footer.small.text-center.shadow-sm
+        // Post-wedding Plans
+        section.plans-section.bg-light.bg-cream-paper
             .container.p-4.px-lg-5
-                | Copyright &copy; Your Website 2023
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.text-center
+                        h2.mb-4 Post-Wedding Plans
+                        p 
+                            | Because we know many of you will be traveling a long way to celebrate with us, we are planning some optional post-wedding activities in Brazil on the days following the wedding. We expect to have some local events in the city of Sao Paulo in the first days immediately after the wedding as well as a multi-day trip to the beach in the days following. 
+                            strong More details to come soon.
+
+        // Contact
+        footer.footer.small.bg-light.bg-handmade-paper.shadow-sm
+            .contact-section.shadow-sm.bg-spattern2#contact
+                .container.p-4.pb-5.px-lg-5
+                    .row.gx-4.gx-lg-5
+                        .col-md-4.mb-3.mb-md-0
+                            .card.py-4.h-100
+                                .card-body.text-center
+                                    h4.text-uppercase.m-0 Ceremony Address
+                                    hr.my-4.mx-auto
+                                    .small.text-black-50
+                                        address
+                                            a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Capela Santa Luzia, São Paulo, Brazil
+                        .col-md-4.mb-3.mb-md-0
+                            .card.py-4.h-100
+                                .card-body.text-center
+                                    h4.text-uppercase.m-0 Email
+                                    hr.my-4.mx-auto
+                                    .small.text-black-50
+                                        a(href='mailto:hello@matthewandmaria.com') hello@matthewandmaria.com
+                        .col-md-4.mb-3.mb-md-0
+                            .card.py-4.h-100
+                                .card-body.text-center
+                                    h4.text-uppercase.m-0 Phone/WhatsApp
+                                    hr.my-4.mx-auto
+                                    .small.text-black-50 
+                                        a(href='tel:+16464910173') +1 (646) 491-0173
+            .container.p-4.px-lg-5
+                .row.mb-4
+                    p We hope to see you there,
+                .row
+                    .col-lg.text-center.signoff
+                        p Matthew W. Thomas
+                    .col-lg.text-center.signoff
+                        p Maria Fernanda Petri Betto
+
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
 
         // Core theme JS
         script(src='js/scripts.js')
-
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // * *                               SB Forms JS                               * *
-        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-        script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
