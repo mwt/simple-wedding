@@ -7,8 +7,8 @@
   min-height: 800px;
   padding: 15rem 0;
   font-size: 16px;
-  background: url('../assets/img/card4.png') center top;
-  background-size: 1600px;
+  background: url('../assets/img/card4-sm.png') center top;
+  background-size: 768px;
   background-repeat: no-repeat;
 
   h1 {
@@ -40,6 +40,9 @@
   }
 
   @include media-breakpoint-up(md) {
+    background: url('../assets/img/card4-md.png') center top;
+    background-size: 992px;
+
     h1 {
       font-size: 4rem;
     }
@@ -56,6 +59,8 @@
   }
 
   @include media-breakpoint-up(lg) {
+    background: url('../assets/img/card4-lg.png') center top;
+    background-size: 1600px;
     min-height: 1142px;
     padding: 0;
 
