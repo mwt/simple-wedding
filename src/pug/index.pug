@@ -191,14 +191,19 @@ html(lang='en').bg-light
                                     hr.my-4.mx-auto
                                     .small.text-black-50 
                                         a(href='tel:+16464910173') +1 (646) 491-0173
-            .container.p-4.px-lg-5
+            .container.p-4.px-lg-5.signoff
                 .row.mb-4
-                    p We hope to see you there,
+                    p.valediction
+                        | We hope to see you there,
                 .row
-                    .col-lg.text-center.signoff
-                        p Matthew W. Thomas
-                    .col-lg.text-center.signoff
-                        p Maria Fernanda Petri Betto
+                    .col-lg.d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                        img(src='assets/img/signature-mwt.svg', alt='Matthew W. Thomas', width='300')
+                        hr.m-0.mb-4
+                        p.text-uppercase Matthew W. Thomas
+                    .col-lg.d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                        img(src='assets/img/signature-mfpb.svg', alt='Matthew W. Thomas', width='300')
+                        hr.m-0.mb-4
+                        p.text-uppercase Maria Fernanda Petri Betto
 
 
         // Bootstrap core JS
