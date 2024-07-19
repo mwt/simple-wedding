@@ -5,14 +5,21 @@
 .masthead {
   width: 100%;
   min-height: 800px;
-  padding: 15rem 0;
+  padding: 5rem 0;
   font-size: 16px;
-  background: url('../assets/img/card4-sm.png') center top;
-  background-size: 768px;
-  background-repeat: no-repeat;
+
+  #masthead-bg {
+    background: url("../assets/img/card4-sm.png") center top;
+    background-size: 768px;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .container {
+    padding-top: 55px;
+  }
 
   h1 {
-    margin-top: 100px;
     font-size: 2.5rem;
     text-align: start;
     font-family: $font-family-decorative;
@@ -24,7 +31,8 @@
     letter-spacing: normal;
   }
 
-  h2,.btn {
+  h2,
+  .btn {
     max-width: 20rem;
     font-size: 1rem;
   }
@@ -40,8 +48,14 @@
   }
 
   @include media-breakpoint-up(md) {
-    background: url('../assets/img/card4-md.png') center top;
-    background-size: 992px;
+    #masthead-bg {
+      background: url("../assets/img/card4-md.png") center top;
+      background-size: 992px;
+    }
+
+    .container {
+      padding-top: 120px;
+    }
 
     h1 {
       font-size: 4rem;
@@ -59,17 +73,24 @@
   }
 
   @include media-breakpoint-up(lg) {
-    background: url('../assets/img/card4-lg.png') center top;
-    background-size: 1600px;
     min-height: 1142px;
-    padding: 0;
+
+    #masthead-bg {
+      background: url("../assets/img/card4-lg.png") center top;
+      background-size: 1600px;
+    }
+
+    .container {
+      padding-top: 0;
+    }
 
     h1 {
       margin-top: 0;
       font-size: 6.5rem;
     }
 
-    h2,.btn {
+    h2,
+    .btn {
       max-width: 30rem;
       font-size: 1.25rem;
     }

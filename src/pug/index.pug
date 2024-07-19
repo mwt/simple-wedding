@@ -36,7 +36,9 @@ html(lang='en').bg-light
                             a.nav-link(href='#contact') Contact
 
         // Masthead
-        header.masthead.d-flex.flex-row.align-items-center.text-secondary.border-top.border-bottom.border-secondary-subtle.shadow-sm
+        header.masthead.d-flex.flex-row.align-items-center.text-secondary.bg-white.bg-cream-paper.border-top.border-bottom.border-secondary-subtle.shadow-sm
+            // fixed object that takes 100% of the parent
+            .position-absolute.w-100.h-100#masthead-bg
             .container.px-4.px-lg-5.d-flex.align-items-center.flex-column
                 h1.text-center Matthew &amp; Maria 
                 h2.text-center are getting married on 
@@ -138,14 +140,8 @@ html(lang='en').bg-light
                     .col-lg-8.text-center.text-white
                         h2.mb-4 Registry
                         p 
-                            | We are registered at 
-                            a(href='https://www.zola.com/registry/mattandmaria').text-white Zola
-                            |  and 
-                            a(href='https://www.amazon.com/wedding/matthewandmaria').text-white Amazon
-                            | . 
-                            | Your presence at our wedding is the greatest gift of all, but if you would like to help us celebrate with a gift, we have selected a few items that we would love to have in our home. 
-                            | Thank you for your love and support!
-                        a.btn.btn-warning.fw-bold.bg-paper-fibers(href='https://www.zola.com/registry/mattandmaria') View Our Registry
+                            | We have not yet set up our registry. Please check back later.
+                        a.btn.btn-warning.fw-bold.bg-paper-fibers.disabled(href='#' role="button" aria-disabled="true") View Our Registry
 
         // Contact
         section.contact-section.shadow-sm#contact
