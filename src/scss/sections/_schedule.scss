@@ -1,0 +1,14 @@
+//
+// // Schedule section
+//
+#schedule {
+  padding: 10rem 0;
+
+  hr {
+    margin: 0 0 3rem;
+
+    @include media-breakpoint-up(lg) {
+      margin: 4.5rem 0 5rem;
+    }
+  }
+}

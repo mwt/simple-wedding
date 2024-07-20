@@ -23,19 +23,19 @@ html(lang='en').bg-light
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.shadow-sm
             .container.px-4.px-lg-5
-                a.navbar-brand(href='#page-top') Wedding Page
+                a.navbar-brand(href='#page-top') Matthew &amp; Maria's Wedding
                 button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     span.navbar-toggler-icon
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto
                         li.nav-item
-                            a.nav-link(href='#venue') Venue
-                        li.nav-item
                             a.nav-link(href='#schedule') Schedule
                         li.nav-item
                             a.nav-link(href='#registry') Registry
                         li.nav-item
-                            a.nav-link(href='#contact') Contact
+                            a.nav-link(href='#hotels') Accommodations
+                        li.nav-item
+                            a.nav-link(href='#todo') Travel Guide
 
         // Masthead
         header.masthead.d-flex.flex-row.text-secondary.bg-light.bg-cream-paper.border-top.border-bottom.border-secondary-subtle.shadow-sm
@@ -66,92 +66,64 @@ html(lang='en').bg-light
                 a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='#about') RSVP Now
 
         // Venue & Schedule
-        section
-
-        // Accommodations
-        section#venue.venue-section.bg-light.bg-handmade-paper.shadow-sm
-            .container.px-4.px-lg-5
+        section#schedule.schedule-section.bg-light.bg-handmade-paper.shadow-sm
+            .container
 
                 // Title
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8.text-center
-                        h2.mb-4 Venue &amp; Accommodations
+                        h2.mb-4 Venue &amp; Schedule
 
-                // Featured Venue Row
-                .row.gx-0.my-4.mb-lg-5.align-items-center
-                    .col-xl-8.col-lg-7
-                        img.img-fluid.mb-3.mb-lg-0(src='assets/img/rosewood1.jpg', alt='Chapel at Rosewood São Paulo' loading='lazy')
-                    .col-xl-4.col-lg-5
-                        .featured-text.text-center.text-lg-left
-                            h4 Main Venue
-                            p 
-                                | The ROSEWOOD SÃO PAULO HOTEL is centrally located within the Cidade Matarazzo complex -- just off Avenida Paulista and its numerous cultural attractions and shopping. The ceremony and reception will both take place within the hotel's property. 
-                                a(href='#') Guests can get a 12% discount and free breakfast when booking here using group code
-                                | 
-                                code FWEDDING
-                                | .
-                            address
-                                p
-                                    strong.text-uppercase Address:
+                        p We're excited to celebrate this special day with you! Both the ceremony and reception will take place within the Rosewood Sao Paulo hotel's complex. The dress code is formal and parking and valet services are available onsite.
+
+                // Two Columns of Cards
+                .row.my-4
+                    // Ceremony
+                    .col-lg.mb-4.my-lg-0
+                        .card.text-center.h-100.shadow-sm
+                            img.card-img-top(src='assets/img/rosewood1.jpg', alt='Ceremony Venue', loading='lazy')
+                            .card-body
+                                h3.card-title Ceremony
+                                p.card-text Located in the Rosewood São Paulo complex, the 1922's Chapel was entirely restored, marking the rebirth of a historical heritage that keeps the memory of the city's growth and the Italian immigration to Brazil at the beginning of the 20th century.
+                                p.card-text 
+                                    em 
+                                        | The ceremony will begin promptly on 
+                                        time(datetime='2025-07-26 18:00:00-0300').fw-bold July 26 at 7pm
+                                        | .
+                            .card-footer
+                                address.m-0
+                                    strong Address: 
                                     | 
-                                    a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76')
-                                        | R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil
-                // Venue One Row
-                .row.gx-0.mb-5.mb-lg-0.justify-content-center
-                    .col-lg-6
-                        img.img-fluid(src='assets/img/demo-image-01.jpg', alt='...')
-                    .col-lg-6
-                        .text-center.h-100.venue
-                            .d-flex.h-100
-                                .venue-text.w-100.my-auto.text-center.text-lg-left
-                                    h4 Other Accommodations
-                                    p.mb-0
-                                        | Coming Soon!
-                // Venue Two Row
-                .row.gx-0.justify-content-center
-                    .col-lg-6
-                        img.img-fluid(src='assets/img/demo-image-02.jpg', alt='...')
-                    .col-lg-6.order-lg-first
-                        .text-center.h-100.venue
-                            .d-flex.h-100
-                                .venue-text.w-100.my-auto.text-center.text-lg-right
-                                    h4 Other Accommodations
-                                    p.mb-0
-                                        | Coming Soon!
+                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Capela Santa Luzia, São Paulo, Brazil
 
-        // Schedule
-        section#schedule.schedule-section.py-5.text-center.shadow-sm
-            .container.p-4.px-lg-5
+                    // Reception
+                    .col-lg.my-4.my-lg-0
+                        .card.text-center.h-100.shadow-sm
+                            img.card-img-top(src='assets/img/rosewood2.jpg', alt='Reception Venue', loading='lazy')
+                            .card-body
+                                h3.card-title Reception
+                                p.card-text Rosewood São Paulo locates within Cidade Matarazzo, a transformed complex of historic buildings in the heart of São Paulo. The project, led by entrepreneur Alexandre Allard and designed by architect Jean Nouvel and artistic director Philippe Starck, emphasizes the sustainability and preservation of Brazil's cultural heritage.
+                                p.card-text 
+                                    em 
+                                        | Reception to follow immediately after the ceremony.
+                            .card-footer
+                                address.m-0
+                                    strong Address: 
+                                    | 
+                                    a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo, Brazil
+                
+                hr
+
+                // After the Wedding
                 .row.gx-4.gx-lg-5.justify-content-center
-                    .col-lg-8
-                        h2.mb-4 Schedule and Getting There
+                    .col-lg-8.text-center
+                        h3.mb-4 After the Wedding
                         p 
-                            | The ceremony will begin promptly on 
-                            time(datetime='2025-07-26 18:00:00-0300').fw-bold July 26 at 7pm
-                            |  in the Santa Luzia chapel, located in the Rosewood Sao Paulo complex.
-                        address
-                            p 
-                                strong.text-uppercase Address: 
-                                | 
-                                a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Capela Santa Luzia, São Paulo, Brazil
-                        p Reception to follow immediately after the ceremony, at the Filomena Cucina event space also located in the Rosewood Sao Paulo.
-                        address
-                            p 
-                                strong.text-uppercase Address:
-                                | 
-                                a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil
-                        p Parking/valet services available. Uber/taxi recommended.
-                        p 
-                            strong.text-uppercase Dress code:
-                            |  Formal
-                        hr.text-primary
-                        p We recommend selecting a direct flight from one of the major U.S. cities like New York (JFK/EWR), Miami (MIA), Los Angeles (LAX), Chicago (ORD), or DC (IAD) to São Paulo's Guarulhos International Airport (GRU). Flights from Miami are often cheaper than from other cities. #[a(href="https://www.google.com/travel/flights?q=Flights%20to%20GRU%20on%202025-07-23%20through%202025-07-30" target="_blank") Booking through travel websites like Google Flights can help you find the best fares].
-                        p  Direct flights from most cities in the United States to São Paulo take approximately 8-12 hours.
-                        p Ensure your passport is valid and check if a visa is required for your travel. #[strong American citizens do not need a travel visa.]
-                img.my-5.img-fluid(src='assets/img/cbird1.png', alt='Decorative image of two birds perched on a floral arrangement' loading='lazy')
+                            | Because we know many of you will be traveling a long way to celebrate with us, we are planning some optional post-wedding activities in Brazil on the days following the wedding. We expect to have some local events in the city of Sao Paulo in the first days immediately after the wedding as well as a multi-day trip to the beach in the days following. 
+                            strong More details to come soon.
 
         // Registry
-        section#registry.registry-section.bg-primary.bg-paper-fibers.shadow
+        section#registry.registry-section.bg-primary.bg-paper-fibers.shadow-sm
             .container.p-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8.text-center.text-white
@@ -160,15 +132,128 @@ html(lang='en').bg-light
                             strong We have not yet set up our registry. Please check back later.
                         a.btn.btn-warning.fw-bold.bg-paper-fibers.disabled(href='#' role="button" aria-disabled="true") View Our Registry
 
-        // Post-wedding Plans
-        section.plans-section.bg-light.bg-cream-paper
+        // Hotels
+        section#hotels.hotel-section.bg-light.bg-cream-paper.shadow-sm
+            .container.px-4.px-lg-5
+
+                // Title
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.text-center
+                        h2.mb-4 Accommodations &amp; Hotel Suggestions
+
+
+                // Featured Hotel Row
+                .row.gx-0.my-4.mb-lg-5.align-items-center
+                    .col-xl-8.col-lg-7
+                        img.img-fluid.mb-3.mb-lg-0(src='assets/img/rosewood2.jpg', alt='Chapel at Rosewood São Paulo' loading='lazy')
+                    .col-xl-4.col-lg-5
+                        .featured-text.text-center.text-lg-left
+                            h4 Main Venue
+                            p 
+                                | The Rosewood Sao Paulo hotel is centrally located within the Cidade Matarazzo complex - just off Avenida Paulista and its numerous cultural attractions and shopping. The ceremony and reception will both take place within the hotel's property.  
+                                a(href='#') Guests can get a 12% discount and free breakfast when booking here using group code
+                                | 
+                                code FWEDDING
+                                | .
+                            address
+                                p
+                                    strong.text-uppercase Address:
+                                    | 
+                                    a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo, Brazil
+                // Hotel One Row
+                .row.gx-0.mb-5.mb-lg-0.justify-content-center
+                    .col-lg-6
+                        img.img-fluid(src='assets/img/demo-image-01.jpg', alt='...')
+                    .col-lg-6
+                        .text-center.h-100.hotel
+                            .d-flex.h-100
+                                .hotel-text.w-100.my-auto.text-center.text-lg-left
+                                    h4 Other Accommodations
+                                    p.mb-0
+                                        | Coming Soon!
+                // Hotel Two Row
+                .row.gx-0.justify-content-center
+                    .col-lg-6
+                        img.img-fluid(src='assets/img/demo-image-02.jpg', alt='...')
+                    .col-lg-6.order-lg-first
+                        .text-center.h-100.hotel
+                            .d-flex.h-100
+                                .hotel-text.w-100.my-auto.text-center.text-lg-right
+                                    h4 Other Accommodations
+                                    p.mb-0
+                                        | Coming Soon!
+
+        // Getting There
+        section#getting-there.getting-there-section.py-5.bg-light.bg-handmade-paper.shadow-sm
+            .container.p-4.px-lg-5
+
+                // Title
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.text-center
+                        h2.mb-4 Getting to Brazil
+
+                .row.gx-4.gx-lg-5.my-5
+
+                    // Flight Information
+                    .col-lg.my-4.my-lg-0
+                        h3 Flight information
+                        p We recommend selecting a direct flight from one of the major U.S. cities like New York (JFK), Miami (MIA), Los Angeles (LAX), Chicago (ORD) or Washington D.C. (IAD) to São Paulo's Guarulhos International Airport (GRU). #[a(href="https://www.google.com/travel/flights?q=Flights%20to%20GRU%20on%202025-07-23%20through%202025-07-30" target="_blank") Booking through travel websites like Google Flights can help you find the best fares].
+                        p Note that the flight duration varies depending on the departure city, but will typically take between 8 and 12 hours.
+                        p 
+                            | Ensure your passport is valid and check if a visa is required for your travel. 
+                            strong American citizens do not need a travel visa.
+                        
+                    // Practical tips
+                    .col-lg.my-4.my-lg-0
+                        h3 Practical tips
+                        p
+                            strong Language:
+                            | 
+                            | Portuguese is the official language, but English is commonly spoken in tourist areas.
+                        p
+                            strong Currency:
+                            | 
+                            | The Brazilian Real (BRL) is the currency used. Credit cards (including international brands) are widely accepted.
+                        p
+                            strong Transportation:
+                            | 
+                            | São Paulo has an extensive public transportation system, including buses, metro, and trains. Taxis and ride-sharing apps are also readily available.
+                        p
+                            strong Safety:
+                            | 
+                            | Like any major city, it's important to stay aware of your surroundings and take standard safety precautions.
+
+                // Bird Image
+                .row.justify-content-center
+                    .col-lg-8.text-center
+                        img.my-5.img-fluid(src='assets/img/cbird1.png', alt='Decorative image of two birds perched on a floral arrangement' loading='lazy')
+
+        // What to Do
+        section#todo.todo-section.bg-light.bg-cream-paper.py-5.shadow-sm
             .container.p-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8.text-center
-                        h2.mb-4 Post-Wedding Plans
+                        h2.mb-4 What to do in São Paulo
+
+                .row.gx-4.gx-lg-5.my-5
+
+                    // Sightseeing
+                    .col-lg.my-4.my-lg-0
+                        h3 Sightseeing
+                        p Nestled in southeastern Brazil, São Paulo is a bustling metropolis renowned for its vibrant energy and cultural diversity. Skyscrapers punctuate the skyline, while sprawling parks like Ibirapuera offer serene escapes amidst the urban hustle. The city's eclectic neighborhoods—from the chic boutiques of Jardins to the bohemian charm of Vila Madalena—are adorned with colorful street art and historic architecture.
                         p 
-                            | Because we know many of you will be traveling a long way to celebrate with us, we are planning some optional post-wedding activities in Brazil on the days following the wedding. We expect to have some local events in the city of Sao Paulo in the first days immediately after the wedding as well as a multi-day trip to the beach in the days following. 
-                            strong More details to come soon.
+                            a(href='https://travel.usnews.com/Sao_Paulo_Brazil/Things_To_Do/') U.S. News Sao Paulo Travel Guide
+                        p
+                            a(href='https://www.tripadvisor.com/Attractions-g303631-Activities-oa0-Sao_Paulo_State_of_Sao_Paulo.html') Tripadvisor's Things to Do in Sao Paulo
+
+                    // Dining
+                    .col-lg.my-4.my-lg-0
+                        h3 Dining
+                        p São Paulo's culinary scene is a feast for the senses, with a diverse array of restaurants serving up everything from traditional Brazilian fare to international cuisine. The city is home to a number of Michelin-starred establishments, as well as casual eateries and food markets that showcase the region's rich gastronomic heritage.
+                        p
+                            a(href='https://guide.michelin.com/us/en/sao-paulo-region/restaurants?showMap=true') Michelin Guide
+                        p
+                            a(href='https://www.tripadvisor.com/Restaurants-g303631-Sao_Paulo_State_of_Sao_Paulo.html') Tripadvisor's Top Restaurants in Sao Paulo
 
         // Contact
         footer.footer.small.bg-light.bg-handmade-paper.shadow-sm
