@@ -1,0 +1,42 @@
+doctype html
+html(lang='en').h-100.w-100
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='Matthew W. Thomas & Maria Fernanda Petri Betto are getting married on July 26, 2025 in São Paulo, Brazil. Submit this form to RSVP.')
+        meta(name='author', content='Matthew W. Thomas and Maria Fernanda Petri Betto')
+
+        title Matthew &amp; Maria Fernanda | Wedding RSVP
+
+        link(rel='icon', type='image/svg+xml', href='/assets/img/favicon.svg')
+        link(rel='icon', type='image/png', href='/assets/img/favicon.png')
+
+        // Core theme CSS (includes Bootstrap)
+        link(href='/css/styles.css', rel='stylesheet')
+
+        style .content {max-width: 500px}
+        
+    body.h-100.w-100.bg-light.bg-cream-paper
+        .d-flex.h-100.w-100.bg-spattern2
+            .d-flex.flex-column.justify-content-center.mx-auto
+                .content.bg-light.bg-handmade-paper.border.shadow-sm.p-4
+                    h1.my-3.text-center Wedding RSVP
+                    p You are invited to the wedding of Matthew Thomas and Maria Betto on July 26th, 2025 in São Paulo Brazil. Please RSVP below.
+                    form(action="", method="post", enctype="multipart/form-data", accept-charset="utf-8")
+                        <?php foreach ($people as $key => $guest_name) { ?>
+                            .my-3
+                                .row
+                                    .form-group.col
+                                        <label for="guest[<?= $key ?>][name]" class="form-label">Guest Name</label>
+                                        <input type="text" id="guest[<?= $key ?>][name]" name="guest[<?= $key ?>][name]" class="form-control" value="<?= $guest_name ?>" <?= $guest_name === "" ? "" : "readonly" ?>>
+                                    .form-group.col-auto
+                                        <label for="guest[<?= $key ?>][attend]" class="form-label">Attendance</label>
+                                        <select id="guest[<?= $key ?>][attend]" name="guest[<?= $key ?>][attend]" class="form-control">
+                                            option Yes
+                                            option No
+                                            option Maybe
+                                        </select>
+                        <?php } ?>
+                        button.btn.btn-danger.bg-paper-fibers(type="submit") Send!

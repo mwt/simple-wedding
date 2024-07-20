@@ -11,7 +11,7 @@ html {
     scroll-padding-top: calc(4.5rem - 1px);
 }
 
-body {
+body.constrained {
     max-width: 1600px;
     margin: 0 auto;
     letter-spacing: $base-letter-spacing;
