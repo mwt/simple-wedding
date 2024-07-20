@@ -4,8 +4,6 @@
 
 .masthead {
   width: 100%;
-  min-height: 800px;
-  padding: 5rem 0;
   font-size: 16px;
 
   #masthead-bg {
@@ -16,7 +14,9 @@
   }
 
   .container {
-    padding-top: 55px;
+    padding-top: 240px;
+    padding-bottom: 5rem;
+    max-width: 900px;
   }
 
   h1 {
@@ -29,11 +29,18 @@
     font-optical-sizing: auto;
     line-height: initial;
     letter-spacing: normal;
+
+    span {
+      display: inline-block;
+    }
   }
 
-  h2,
-  .btn {
+  h2 {
     max-width: 20rem;
+    font-size: 1.25rem;
+  }
+
+  .btn {
     font-size: 1rem;
   }
 
@@ -47,14 +54,16 @@
     }
   }
 
+  @include media-breakpoint-up(sm) {
+    .container {
+      padding-top: 290px;
+    }
+  }
+
   @include media-breakpoint-up(md) {
     #masthead-bg {
       background: url("../assets/img/card4-md.png") center top;
       background-size: 992px;
-    }
-
-    .container {
-      padding-top: 120px;
     }
 
     h1 {
@@ -73,6 +82,7 @@
   }
 
   @include media-breakpoint-up(lg) {
+    align-items: center;
     min-height: 1142px;
 
     #masthead-bg {
@@ -81,17 +91,20 @@
     }
 
     .container {
-      padding-top: 0;
+      padding: 0;
     }
 
     h1 {
       margin-top: 0;
-      font-size: 6.5rem;
+      font-size: 6rem;
     }
 
-    h2,
-    .btn {
+    h2 {
       max-width: 30rem;
+      font-size: 1.5rem;
+    }
+
+    .btn {
       font-size: 1.25rem;
     }
 
