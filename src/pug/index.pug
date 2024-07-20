@@ -18,7 +18,7 @@ html(lang='en').bg-light
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
-    body.bg-white.bg-cream-paper#page-top
+    body#page-top.bg-white.bg-cream-paper
 
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.shadow-sm
@@ -40,7 +40,7 @@ html(lang='en').bg-light
         // Masthead
         header.masthead.d-flex.flex-row.text-secondary.bg-light.bg-cream-paper.border-top.border-bottom.border-secondary-subtle.shadow-sm
             // fixed object that takes 100% of the parent
-            .position-absolute.w-100.h-100#masthead-bg
+            #masthead-bg.position-absolute.w-100.h-100
             .container.px-4.px-lg-5.d-flex.align-items-center.flex-column
                 h1.text-center 
                     span Matthew
@@ -65,7 +65,10 @@ html(lang='en').bg-light
                         span.countdown-unit(name='label-seconds') seconds
                 a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='#about') RSVP Now
 
-        // Venue and Accommodations
+        // Venue & Schedule
+        section
+
+        // Accommodations
         section#venue.venue-section.bg-light.bg-handmade-paper.shadow-sm
             .container.px-4.px-lg-5
 
@@ -148,7 +151,7 @@ html(lang='en').bg-light
                 img.my-5.img-fluid(src='assets/img/cbird1.png', alt='Decorative image of two birds perched on a floral arrangement' loading='lazy')
 
         // Registry
-        section.registry-section.bg-primary.bg-paper-fibers.shadow#registry
+        section#registry.registry-section.bg-primary.bg-paper-fibers.shadow
             .container.p-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8.text-center.text-white
@@ -169,7 +172,7 @@ html(lang='en').bg-light
 
         // Contact
         footer.footer.small.bg-light.bg-handmade-paper.shadow-sm
-            .contact-section.shadow-sm.bg-spattern2#contact
+            #contact.contact-section.shadow-sm.bg-spattern2
                 .container.p-4.pb-5.px-lg-5
                     .row.gx-4.gx-lg-5
                         .col-md-4.mb-3.mb-md-0
