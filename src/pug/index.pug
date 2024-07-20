@@ -5,12 +5,13 @@ html(lang='en').bg-light
 
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='')
-        meta(name='author', content='')
+        meta(name='description', content='Matthew W. Thomas & Maria Fernanda Petri Betto are getting married on July 26, 2025 in São Paulo, Brazil. Join us for the celebration!')
+        meta(name='author', content='Matthew W. Thomas and Maria Fernanda Petri Betto')
 
         title Matthew &amp; Maria Fernanda | Wedding Site
 
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+        link(rel='icon', type='image/svg+xml', href='assets/img/favicon.svg')
+        link(rel='icon', type='image/png', href='assets/img/favicon.png')
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css2?family=Parisienne&display=swap', rel='stylesheet')
@@ -23,7 +24,8 @@ html(lang='en').bg-light
         // Navigation
         nav#mainNav.navbar.navbar-expand-lg.shadow-sm
             .container.px-4.px-lg-5
-                a.navbar-brand(href='#page-top') Matthew &amp; Maria's Wedding
+                a.navbar-brand(href='#page-top')
+                    img(src='assets/img/mm.svg', alt='Matthew & Maria Fernanda', height='30')
                 button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     span.navbar-toggler-icon
                 #navbarResponsive.collapse.navbar-collapse
@@ -49,7 +51,7 @@ html(lang='en').bg-light
                 h2.text-center are getting married on 
                     time(datetime='2025-07-26 18:00:00-0300') July 26, 2025
                     |  in 
-                    data(title='Rosewood São Paulo' value='R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil') São&nbsp;Paulo, Brazil
+                    data(title='Rosewood São Paulo' value='R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil') São Paulo, Brazil
                 #countdown.d-flex.flex-row.justify-content-center.flex-wrap.my-4(data-countdown-date='2025-07-26 18:00:00-0300')
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                         span.countdown-number(aria-labelledby='label-days', data-countdown-unit='days') 00
@@ -63,7 +65,7 @@ html(lang='en').bg-light
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                         span.countdown-number(aria-labelledby='label-seconds', data-countdown-unit='seconds') 00
                         span.countdown-unit(name='label-seconds') seconds
-                a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='#about') RSVP Now
+                a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='rsvp') RSVP Now
 
         // Venue & Schedule
         section#schedule.schedule-section.bg-light.bg-handmade-paper.shadow-sm
@@ -74,7 +76,7 @@ html(lang='en').bg-light
                     .col-lg-8.text-center
                         h2.mb-4 Venue &amp; Schedule
 
-                        p We're excited to celebrate this special day with you! Both the ceremony and reception will take place within the Rosewood Sao Paulo hotel's complex. The dress code is formal and parking and valet services are available onsite.
+                        p We're excited to celebrate this special day with you! Both the ceremony and reception will take place within the Rosewood São Paulo hotel's complex. The dress code is formal and parking and valet services are available onsite.
 
                 // Two Columns of Cards
                 .row.my-4
@@ -82,7 +84,7 @@ html(lang='en').bg-light
                     .col-lg.mb-4.my-lg-0
                         .card.text-center.h-100.shadow-sm
                             img.card-img-top(src='assets/img/rosewood1.jpg', alt='Ceremony Venue', loading='lazy')
-                            .card-body
+                            .card-body 
                                 h3.card-title Ceremony
                                 p.card-text Located in the Rosewood São Paulo complex, the 1922's Chapel was entirely restored, marking the rebirth of a historical heritage that keeps the memory of the city's growth and the Italian immigration to Brazil at the beginning of the 20th century.
                                 p.card-text 
@@ -94,7 +96,7 @@ html(lang='en').bg-light
                                 address.m-0
                                     strong Address: 
                                     | 
-                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Capela Santa Luzia, São Paulo, Brazil
+                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6' target='_blank') Capela Santa Luzia, São Paulo, Brazil
 
                     // Reception
                     .col-lg.my-4.my-lg-0
@@ -110,7 +112,7 @@ html(lang='en').bg-light
                                 address.m-0
                                     strong Address: 
                                     | 
-                                    a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo, Brazil
+                                    a(href='https://maps.app.goo.gl/StwrtFRVXJkzAeXU8' target='_blank') R. Itapeva, 435, São Paulo, Brazil
                 
                 hr
 
@@ -119,7 +121,7 @@ html(lang='en').bg-light
                     .col-lg-8.text-center
                         h3.mb-4 After the Wedding
                         p 
-                            | Because we know many of you will be traveling a long way to celebrate with us, we are planning some optional post-wedding activities in Brazil on the days following the wedding. We expect to have some local events in the city of Sao Paulo in the first days immediately after the wedding as well as a multi-day trip to the beach in the days following. 
+                            | Because we know many of you will be traveling a long way to celebrate with us, we are planning some optional post-wedding activities in Brazil on the days following the wedding. We expect to have some local events in the city of São Paulo in the first days immediately after the wedding as well as a multi-day trip to the beach in the days following. 
                             strong More details to come soon.
 
         // Registry
@@ -130,7 +132,7 @@ html(lang='en').bg-light
                         h2.mb-4 Registry
                         p 
                             strong We have not yet set up our registry. Please check back later.
-                        a.btn.btn-warning.fw-bold.bg-paper-fibers.disabled(href='#' role="button" aria-disabled="true") View Our Registry
+                        a.btn.btn-warning.fw-bold.bg-paper-fibers.disabled(href='#' role="button" aria-disabled="true" target='_blank') View Our Registry
 
         // Hotels
         section#hotels.hotel-section.bg-light.bg-cream-paper.shadow-sm
@@ -145,44 +147,67 @@ html(lang='en').bg-light
                 // Featured Hotel Row
                 .row.gx-0.my-4.mb-lg-5.align-items-center
                     .col-xl-8.col-lg-7
-                        img.img-fluid.mb-3.mb-lg-0(src='assets/img/rosewood2.jpg', alt='Chapel at Rosewood São Paulo' loading='lazy')
+                        img.img-fluid.mb-3.mb-lg-0(src='assets/img/rosewood2.jpg', alt='Exterior of Rosewood São Paulo' loading='lazy')
                     .col-xl-4.col-lg-5
                         .featured-text.text-center.text-lg-left
-                            h4 Main Venue
+                            a(href='https://www.rosewoodhotels.com/en/sao-paulo' target='_blank')
+                                h4 Rosewood São Paulo
                             p 
-                                | The Rosewood Sao Paulo hotel is centrally located within the Cidade Matarazzo complex - just off Avenida Paulista and its numerous cultural attractions and shopping. The ceremony and reception will both take place within the hotel's property.  
-                                a(href='#') Guests can get a 12% discount and free breakfast when booking here using group code
-                                | 
-                                code FWEDDING
+                                | The Rosewood São Paulo hotel is centrally located within the Cidade Matarazzo complex—just off Avenida Paulista and its numerous cultural attractions and shopping. The ceremony and reception will both take place within the hotel's property.  
+                                a(href='mailto:saopaulo.reservations@rosewoodhotels.com') Guests can get a 12% discount and free breakfast when booking by emailing the property
                                 | .
                             address
                                 p
                                     strong.text-uppercase Address:
                                     | 
-                                    a(href='https://maps.app.goo.gl/HmryCPMQe6yUU6j76') R. Itapeva, 435 - Bela Vista, São Paulo, Brazil
+                                    a(href='https://maps.app.goo.gl/StwrtFRVXJkzAeXU8' target='_blank') R. Itapeva, 435, São Paulo, Brazil
+                            p 
+                                strong.text-uppercase Price range:
+                                | 
+                                | $500-600/night
                 // Hotel One Row
                 .row.gx-0.mb-5.mb-lg-0.justify-content-center
                     .col-lg-6
-                        img.img-fluid(src='assets/img/demo-image-01.jpg', alt='...')
+                        img.img-fluid(src='assets/img/portobay.jpg', alt='...')
                     .col-lg-6
                         .text-center.h-100.hotel
                             .d-flex.h-100
                                 .hotel-text.w-100.my-auto.text-center.text-lg-left
-                                    h4 Other Accommodations
-                                    p.mb-0
-                                        | Coming Soon!
+                                    a(href='https://www.portobay.com/en/hotels/sao-paulo-hotels/l-hotel-portobay-sao-paulo/' target='_blank')
+                                        h4 L'Hotel PortoBay São Paulo
+                                    p
+                                        | L'Hotel PortoBay São Paulo is a boutique hotel within a 10-minute walk of the venue. The hotel offers an indoor heated pool (July is winter in Brazil), a spa, and an excellent restaurant.
+                                    address
+                                        p
+                                            strong.text-uppercase Address:
+                                            | 
+                                            a(href='https://maps.app.goo.gl/yj3FGjuVDhVG1yix9' target='_blank') Alameda Campinas, 266, São Paulo, Brazil
+                                    p 
+                                        strong.text-uppercase Price range:
+                                        | 
+                                        | $170-220/night
+
                 // Hotel Two Row
                 .row.gx-0.justify-content-center
                     .col-lg-6
-                        img.img-fluid(src='assets/img/demo-image-02.jpg', alt='...')
+                        img.img-fluid(src='assets/img/wallstreet.jpg', alt='...')
                     .col-lg-6.order-lg-first
                         .text-center.h-100.hotel
                             .d-flex.h-100
                                 .hotel-text.w-100.my-auto.text-center.text-lg-right
-                                    h4 Other Accommodations
-                                    p.mb-0
-                                        | Coming Soon!
-
+                                    a(href='https://book.omnibees.com/hotelresults?q=13058&lang=en-US&currencyId=109' target='_blank')
+                                        h4 Hotel Paulista Wall Street
+                                    p
+                                        | Hotel Paulista Wall Street is an all-suite inn directly across the street from the wedding venue. The premium suites were recently renovated and offer an excellent value. Its prime location in central São Paulo situates it close to many of the city's attractions.
+                                    address
+                                        p
+                                            strong.text-uppercase Address:
+                                            | 
+                                            a(href='https://maps.app.goo.gl/1oqCQ31fJSFN9de4A' target='_blank') R. Itapeva, 636, São Paulo, Brazil
+                                    p 
+                                        strong.text-uppercase Price range:
+                                        | 
+                                        | $70-100/night
         // Getting There
         section#getting-there.getting-there-section.py-5.bg-light.bg-handmade-paper.shadow-sm
             .container.p-4.px-lg-5
@@ -242,18 +267,18 @@ html(lang='en').bg-light
                         h3 Sightseeing
                         p Nestled in southeastern Brazil, São Paulo is a bustling metropolis renowned for its vibrant energy and cultural diversity. Skyscrapers punctuate the skyline, while sprawling parks like Ibirapuera offer serene escapes amidst the urban hustle. The city's eclectic neighborhoods—from the chic boutiques of Jardins to the bohemian charm of Vila Madalena—are adorned with colorful street art and historic architecture.
                         p 
-                            a(href='https://travel.usnews.com/Sao_Paulo_Brazil/Things_To_Do/') U.S. News Sao Paulo Travel Guide
+                            a(href='https://travel.usnews.com/Sao_Paulo_Brazil/Things_To_Do/' target='_blank') U.S. News São Paulo Travel Guide
                         p
-                            a(href='https://www.tripadvisor.com/Attractions-g303631-Activities-oa0-Sao_Paulo_State_of_Sao_Paulo.html') Tripadvisor's Things to Do in Sao Paulo
+                            a(href='https://www.tripadvisor.com/Attractions-g303631-Activities-oa0-Sao_Paulo_State_of_Sao_Paulo.html' target='_blank') Tripadvisor's Things to Do in São Paulo
 
                     // Dining
                     .col-lg.my-4.my-lg-0
                         h3 Dining
                         p São Paulo's culinary scene is a feast for the senses, with a diverse array of restaurants serving up everything from traditional Brazilian fare to international cuisine. The city is home to a number of Michelin-starred establishments, as well as casual eateries and food markets that showcase the region's rich gastronomic heritage.
                         p
-                            a(href='https://guide.michelin.com/us/en/sao-paulo-region/restaurants?showMap=true') Michelin Guide
+                            a(href='https://guide.michelin.com/us/en/sao-paulo-region/restaurants?showMap=true' target='_blank') Michelin Guide
                         p
-                            a(href='https://www.tripadvisor.com/Restaurants-g303631-Sao_Paulo_State_of_Sao_Paulo.html') Tripadvisor's Top Restaurants in Sao Paulo
+                            a(href='https://www.tripadvisor.com/Restaurants-g303631-Sao_Paulo_State_of_Sao_Paulo.html' target='_blank') Tripadvisor's Top Restaurants in São Paulo
 
         // Contact
         footer.footer.small.bg-light.bg-handmade-paper.shadow-sm
@@ -267,7 +292,7 @@ html(lang='en').bg-light
                                     hr.my-4.mx-auto
                                     .small.text-black-50
                                         address
-                                            a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6') Capela Santa Luzia, São Paulo, Brazil
+                                            a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6' target='_blank') Capela Santa Luzia, São Paulo, Brazil
                         .col-md-4.mb-3.mb-md-0
                             .card.py-4.h-100
                                 .card-body.text-center
@@ -298,7 +323,7 @@ html(lang='en').bg-light
 
 
         // Bootstrap core JS
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js')
 
         // Core theme JS
         script(src='js/scripts.js')
