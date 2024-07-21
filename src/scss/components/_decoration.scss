@@ -2,7 +2,11 @@ $paper-images: cream-paper, handmade-paper, paper-fibers, spattern2;
 
 @each $paper in $paper-images {
   .bg-#{$paper} {
-    background-image: url("../assets/img/#{$paper}.png") !important;
+    background-image: url("../assets/img/#{$paper}/2x.png") !important;
+    background-image: image-set(
+      url("../assets/img/#{$paper}/1x.png") 1x,
+      url("../assets/img/#{$paper}/2x.png") 2x
+    ) !important;
     background-position: top;
     background-attachment: local;
   }

@@ -7,7 +7,11 @@
   font-size: 16px;
 
   #masthead-bg {
-    background: no-repeat center top / 576px url("../assets/img/card4-xs.png");
+    background: no-repeat center top / 576px url("../assets/img/card4/xs-2x.png");
+    background-image: image-set(
+      url("../assets/img/card4/xs-1x.png") 1x,
+      url("../assets/img/card4/xs-2x.png") 2x
+    );
     z-index: -1;
   }
 
@@ -54,7 +58,11 @@
 
   @include media-breakpoint-up(sm) {
     #masthead-bg {
-      background: no-repeat center top / 768px url("../assets/img/card4-sm.png");
+      background: no-repeat center top / 768px url("../assets/img/card4/sm-2x.png");
+      background-image: image-set(
+        url("../assets/img/card4/sm-1x.png") 1x,
+        url("../assets/img/card4/sm-2x.png") 2x
+      );
     }
 
     .container {
@@ -64,7 +72,11 @@
 
   @include media-breakpoint-up(md) {
     #masthead-bg {
-      background: no-repeat center top / 992px url("../assets/img/card4-md.png");
+      background: no-repeat center top / 992px url("../assets/img/card4/md-2x.png");
+      background-image: image-set(
+        url("../assets/img/card4/md-1x.png") 1x,
+        url("../assets/img/card4/md-2x.png") 2x
+      );
     }
 
     .container {
@@ -91,7 +103,11 @@
     min-height: 1142px;
 
     #masthead-bg {
-      background: no-repeat center top / 1600px url("../assets/img/card4-lg.png");
+      background: no-repeat center top / 1600px url("../assets/img/card4/lg-2x.png");
+      background-image: image-set(
+        url("../assets/img/card4/lg-1x.png") 1x,
+        url("../assets/img/card4/lg-2x.png") 2x
+      );
     }
 
     .container {
