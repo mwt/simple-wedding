@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         # Write the header if the file is empty
         if ($file_size == 0) {
-            fputcsv($file, ["ID", "Date", "Name", "Attendance"]);
+            fputcsv($file, ["ID", "Date", "Name", "Attendance", "Email"]);
         }
 
         # Create an ID using the file size
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         # Loop through the guests and write them to the file
         # current datetime
         foreach ($_POST["guest"] as $i => $guest) {
-            fputcsv($file, [$id . "-" . $i, date("Y-m-d H:i:s"), $guest["name"], $guest["attend"]]);
+            fputcsv($file, [$id . "-" . $i, date("Y-m-d H:i:s"), $guest["name"], $guest["attend"], $_POST["email"]]);
         }
 
         # Release the lock and close the file

@@ -26,17 +26,24 @@ html(lang='en').h-100.w-100
                     p You are invited to the wedding of Matthew Thomas and Maria Betto on July 26th, 2025 in São Paulo Brazil. Please RSVP below.
                     form(action="", method="post", enctype="multipart/form-data", accept-charset="utf-8")
                         <?php foreach ($people as $key => $guest_name) { ?>
-                            .my-3
-                                .row
-                                    .form-group.col
-                                        <label for="guest[<?= $key ?>][name]" class="form-label">Guest Name</label>
-                                        <input type="text" id="guest[<?= $key ?>][name]" name="guest[<?= $key ?>][name]" class="form-control" value="<?= $guest_name ?>" <?= $guest_name === "" ? "" : "readonly" ?>>
-                                    .form-group.col-auto
-                                        <label for="guest[<?= $key ?>][attend]" class="form-label">Attendance</label>
-                                        <select id="guest[<?= $key ?>][attend]" name="guest[<?= $key ?>][attend]" class="form-control">
-                                            option Yes
-                                            option No
-                                            option Maybe
-                                        </select>
+                            .my-3.row
+                                .form-group.col
+                                    <label for="guest[<?= $key ?>][name]" class="form-label">Guest Name</label>
+                                    <input type="text" id="guest[<?= $key ?>][name]" name="guest[<?= $key ?>][name]" class="form-control" value="<?= $guest_name ?>" <?= $guest_name === "" ? "" : "readonly" ?>>
+                                .form-group.col-auto
+                                    <label for="guest[<?= $key ?>][attend]" class="form-label">Attendance</label>
+                                    <select id="guest[<?= $key ?>][attend]" name="guest[<?= $key ?>][attend]" class="form-control">
+                                        option Yes
+                                        option No
+                                        option Maybe
+                                    </select>
+                        <?php } ?>
+                        <?php if (empty($_GET['e'])) { ?>
+                            .my-3.row 
+                                .form-group
+                                    label.form-label(for="email") Contact email
+                                    input.form-control#email(value="", type="email", name="email" required)
+                        <?php } else { ?>
+                            <input type="hidden" name="email" value="<?= $_GET['e'] ?>">
                         <?php } ?>
                         button.btn.btn-danger.bg-paper-fibers(type="submit") Send!
