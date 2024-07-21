@@ -4,20 +4,20 @@ html(lang='en').bg-light
     head
 
         meta(charset='utf-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='Matthew W. Thomas & Maria Fernanda Petri Betto are getting married on July 26, 2025 in São Paulo, Brazil. Join us for the celebration!')
-        meta(name='author', content='Matthew W. Thomas and Maria Fernanda Petri Betto')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='Matthew W. Thomas & Maria Fernanda Petri Betto are getting married on July 26, 2025 in São Paulo, Brazil. Join us for the celebration!')
+        meta(name='author' content='Matthew W. Thomas and Maria Fernanda Petri Betto')
 
         title Matthew &amp; Maria Fernanda | Wedding Site
 
-        link(rel='icon', type='image/svg+xml', href='/assets/img/favicon.svg')
-        link(rel='icon', type='image/png', href='/assets/img/favicon.png')
+        link(rel='icon' type='image/svg+xml' href='/assets/img/favicon.svg')
+        link(rel='icon' type='image/png' href='/assets/img/favicon.png')
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css2?family=Parisienne&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css2?family=Parisienne&display=swap' rel='stylesheet')
 
         // Core theme CSS (includes Bootstrap)
-        link(href='/css/styles.css', rel='stylesheet')
+        link(href='/css/styles.css' rel='stylesheet')
 
     body#page-top.bg-white.bg-cream-paper.constrained
 
@@ -25,8 +25,8 @@ html(lang='en').bg-light
         nav#mainNav.navbar.navbar-expand-lg.shadow-sm
             .container.px-4.px-lg-5
                 a.navbar-brand(href='#page-top')
-                    img(src='/assets/img/mm.svg', alt='Matthew & Maria Fernanda', height='30')
-                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    img(src='/assets/img/mm.svg' alt='Matthew & Maria Fernanda' height='30')
+                button.navbar-toggler.navbar-toggler-right(type='button' data-bs-toggle='collapse' data-bs-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
                     span.navbar-toggler-icon
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto
@@ -48,22 +48,23 @@ html(lang='en').bg-light
                     span Matthew
                     |  &amp; 
                     span Maria Fernanda
-                h2.text-center are getting married on 
+                h2.text-center 
+                    | are getting married on 
                     time(datetime='2025-07-26 18:00:00-0300') July 26, 2025
                     |  in 
                     data(title='Rosewood São Paulo' value='R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil') São Paulo, Brazil
                 #countdown.d-flex.flex-row.justify-content-center.flex-wrap.my-4(data-countdown-date='2025-07-26 18:00:00-0300')
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
-                        span.countdown-number(aria-labelledby='label-days', data-countdown-unit='days') 00
+                        span.countdown-number(aria-labelledby='label-days' data-countdown-unit='days') 00
                         span.countdown-unit(name='label-days') days
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
-                        span.countdown-number(aria-labelledby='label-hours', data-countdown-unit='hours') 00
+                        span.countdown-number(aria-labelledby='label-hours' data-countdown-unit='hours') 00
                         span.countdown-unit(name='label-hours') hours
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
-                        span.countdown-number(aria-labelledby='label-minutes', data-countdown-unit='minutes') 00
+                        span.countdown-number(aria-labelledby='label-minutes' data-countdown-unit='minutes') 00
                         span.countdown-unit(name='label-minutes') minutes
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
-                        span.countdown-number(aria-labelledby='label-seconds', data-countdown-unit='seconds') 00
+                        span.countdown-number(aria-labelledby='label-seconds' data-countdown-unit='seconds') 00
                         span.countdown-unit(name='label-seconds') seconds
                 a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='rsvp/?p=,') RSVP Now
 
@@ -83,37 +84,36 @@ html(lang='en').bg-light
                     // Ceremony
                     .col-lg.mb-4.my-lg-0
                         .card.text-center.h-100.shadow-sm
-                            img.card-img-top(src='/assets/img/rosewood1.jpg', alt='Ceremony Venue', loading='lazy')
+                            img.card-img-top(src='/assets/img/rosewood1.jpg' alt='Ceremony Venue' loading='lazy')
                             .card-body 
                                 h3.card-title Ceremony
                                 p.card-text Located in the Rosewood São Paulo complex, the 1922's Chapel was entirely restored, marking the rebirth of a historical heritage that keeps the memory of the city's growth and the Italian immigration to Brazil at the beginning of the 20th century.
                                 p.card-text 
                                     em 
                                         | The ceremony will begin promptly on 
-                                        time(datetime='2025-07-26 18:00:00-0300').fw-bold July 26 at 7pm
+                                        time.fw-bold(datetime='2025-07-26 18:00:00-0300') July 26 at 7pm
                                         | .
                             .card-footer
                                 address.m-0
-                                    strong Address: 
+                                    strong Address:
                                     | 
                                     a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6' target='_blank') Capela Santa Luzia, São Paulo, Brazil
 
                     // Reception
                     .col-lg.my-4.my-lg-0
                         .card.text-center.h-100.shadow-sm
-                            img.card-img-top(src='/assets/img/rosewood2.jpg', alt='Reception Venue', loading='lazy')
+                            img.card-img-top(src='/assets/img/rosewood2.jpg' alt='Reception Venue' loading='lazy')
                             .card-body
                                 h3.card-title Reception
                                 p.card-text Rosewood São Paulo locates within Cidade Matarazzo, a transformed complex of historic buildings in the heart of São Paulo. The project, led by entrepreneur Alexandre Allard and designed by architect Jean Nouvel and artistic director Philippe Starck, emphasizes the sustainability and preservation of Brazil's cultural heritage.
                                 p.card-text 
-                                    em 
-                                        | Reception to follow immediately after the ceremony.
+                                    em Reception to follow immediately after the ceremony.
                             .card-footer
                                 address.m-0
-                                    strong Address: 
+                                    strong Address:
                                     | 
                                     a(href='https://maps.app.goo.gl/StwrtFRVXJkzAeXU8' target='_blank') R. Itapeva, 435, São Paulo, Brazil
-                
+
                 hr
 
                 // After the Wedding
@@ -143,17 +143,16 @@ html(lang='en').bg-light
                     .col-lg-8.text-center
                         h2.mb-4 Accommodations &amp; Hotel Suggestions
 
-
                 // Featured Hotel Row
                 .row.gx-0.my-4.mb-lg-5.align-items-center
                     .col-xl-8.col-lg-7
-                        img.img-fluid.mb-3.mb-lg-0(src='/assets/img/rosewood2.jpg', alt='Exterior of Rosewood São Paulo' loading='lazy')
+                        img.img-fluid.mb-3.mb-lg-0(src='/assets/img/rosewood2.jpg' alt='Exterior of Rosewood São Paulo' loading='lazy')
                     .col-xl-4.col-lg-5
                         .featured-text.text-center.text-lg-left
                             a(href='https://www.rosewoodhotels.com/en/sao-paulo' target='_blank')
                                 h4 Rosewood São Paulo
-                            p 
-                                | The Rosewood São Paulo hotel is centrally located within the Cidade Matarazzo complex—just off Avenida Paulista and its numerous cultural attractions and shopping. The ceremony and reception will both take place within the hotel's property.  
+                            p
+                                | The Rosewood São Paulo hotel is centrally located within the Cidade Matarazzo complex—just off Avenida Paulista and its numerous cultural attractions and shopping. The ceremony and reception will both take place within the hotel's property. 
                                 a(href='mailto:saopaulo.reservations@rosewoodhotels.com') Guests can get a 12% discount and free breakfast when booking by emailing the property
                                 | .
                             address
@@ -161,14 +160,14 @@ html(lang='en').bg-light
                                     strong.text-uppercase Address:
                                     | 
                                     a(href='https://maps.app.goo.gl/StwrtFRVXJkzAeXU8' target='_blank') R. Itapeva, 435, São Paulo, Brazil
-                            p 
+                            p
                                 strong.text-uppercase Price range:
-                                | 
-                                | $500-600/night
+                                |  $500-600/night
+
                 // Hotel One Row
                 .row.gx-0.mb-5.mb-lg-0.justify-content-center
                     .col-lg-6
-                        img.img-fluid(src='/assets/img/portobay.jpg', alt="L'Hotel PortoBay São Paulo entrance", loading='lazy')
+                        img.img-fluid(src='/assets/img/portobay.jpg' alt="L'Hotel PortoBay São Paulo entrance" loading='lazy')
                     .col-lg-6
                         .text-center.h-100.hotel
                             .d-flex.h-100
@@ -184,13 +183,12 @@ html(lang='en').bg-light
                                             a(href='https://maps.app.goo.gl/yj3FGjuVDhVG1yix9' target='_blank') Alameda Campinas, 266, São Paulo, Brazil
                                     p 
                                         strong.text-uppercase Price range:
-                                        | 
-                                        | $170-220/night
+                                        |  $170-220/night
 
                 // Hotel Two Row
                 .row.gx-0.justify-content-center
                     .col-lg-6
-                        img.img-fluid(src='/assets/img/wallstreet.jpg', alt='Hotel Paulista Wall Street check-in area', loading='lazy')
+                        img.img-fluid(src='/assets/img/wallstreet.jpg' alt='Hotel Paulista Wall Street check-in area' loading='lazy')
                     .col-lg-6.order-lg-first
                         .text-center.h-100.hotel
                             .d-flex.h-100
@@ -206,8 +204,8 @@ html(lang='en').bg-light
                                             a(href='https://maps.app.goo.gl/1oqCQ31fJSFN9de4A' target='_blank') R. Itapeva, 636, São Paulo, Brazil
                                     p 
                                         strong.text-uppercase Price range:
-                                        | 
-                                        | $70-100/night
+                                        |  $70-100/night
+
         // Getting There
         section#getting-there.getting-there-section.py-5.bg-light.bg-handmade-paper.shadow-sm
             .container.p-4.px-lg-5
@@ -227,7 +225,7 @@ html(lang='en').bg-light
                         p 
                             | Ensure your passport is valid and check if a visa is required for your travel. 
                             strong American citizens do not need a travel visa.
-                        
+
                     // Practical tips
                     .col-lg.my-4.my-lg-0
                         h3 Practical tips
@@ -251,7 +249,7 @@ html(lang='en').bg-light
                 // Bird Image
                 .row.justify-content-center
                     .col-lg-8.text-center
-                        img.my-5.img-fluid(src='/assets/img/cbird1.png', alt='Decorative image of two birds perched on a floral arrangement' loading='lazy')
+                        img.my-5.img-fluid(src='/assets/img/cbird1.png' alt='Decorative image of two birds perched on a floral arrangement' loading='lazy')
 
         // What to Do
         section#todo.todo-section.bg-light.bg-cream-paper.py-5.shadow-sm
@@ -313,14 +311,13 @@ html(lang='en').bg-light
                         | We hope to see you there,
                 .row
                     .col-lg.d-flex.flex-column.align-items-center.justify-content-end.author-signature
-                        img(src='/assets/img/signature-mwt.svg', alt='Matthew W. Thomas', width='300', loading='lazy')
+                        img(src='/assets/img/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
                         hr.m-0.mb-4
                         p.text-uppercase Matthew W. Thomas
                     .col-lg.d-flex.flex-column.align-items-center.justify-content-end.author-signature
-                        img(src='/assets/img/signature-mfpb.svg', alt='Matthew W. Thomas', width='300', loading='lazy')
+                        img(src='/assets/img/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
                         hr.m-0.mb-4
                         p.text-uppercase Maria Fernanda Petri Betto
-
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js')
