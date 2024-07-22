@@ -39,8 +39,7 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-grayscale.git"
     },
     "dependencies": {
-        "bootstrap": "5.3.3",
-        "uncss": "^0.17.3"
+        "bootstrap": "5.3.3"
     },
     "devDependencies": {
         "autoprefixer": "10.4.19",
@@ -52,6 +51,8 @@
         "pug": "3.0.3",
         "sass": "1.77.6",
         "shelljs": "0.8.5",
+        "uglify-js": "^3.17.4",
+        "uncss": "^0.17.3",
         "upath": "2.0.1"
     }
 }
