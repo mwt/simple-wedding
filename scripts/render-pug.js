@@ -33,6 +33,7 @@ module.exports = function renderPug(filePath) {
     // If file ending is not .php.pug, save to .html
     const destPath = destPathPug.replace(/\.pug$/, ".html");
 
+    /*
     // Prettify the HTML
     const prettified = prettier.format(html, {
       printWidth: 1000,
@@ -44,6 +45,10 @@ module.exports = function renderPug(filePath) {
     });
 
     prettified.then((out) => fs.writeFileSync(destPath, out));
+    */
+
+    // Write the file to the destination and return
+    fs.writeFileSync(destPath, html);
     return;
   }
 };

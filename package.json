@@ -9,7 +9,7 @@
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
         "build:rsvp": "node scripts/build-rsvp.js",
-        "uncss": "npm run build && php ./dist/en/rsvp/index.php >  ./dist/en/rsvp/temp.html && uncss -o ./dist/css/styles.css --htmlroot ./dist/ --ignoreSheets '/fonts.googleapis.com/' ./dist/en/index.html ./dist/en/rsvp/templates/success.html ./dist/en/rsvp/temp.html && rm ./dist/en/rsvp/temp.html",
+        "uncss": "npm run build && php ./dist/en/rsvp/index.php >  ./dist/en/rsvp/temp.html && uncss -n -o ./dist/css/styles.css --htmlroot ./dist/ --ignoreSheets '/fonts.googleapis.com/' ./dist/en/index.html ./dist/en/rsvp/templates/success.html ./dist/en/rsvp/temp.html && rm ./dist/en/rsvp/temp.html",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js",
