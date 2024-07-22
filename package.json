@@ -13,7 +13,7 @@
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js",
-        "deploy": "rsync -av --delete --exclude 'rsvp.csv' dist/ speedypage:matthewandmaria.com"
+        "deploy": "rsync -av --delete --exclude 'rsvp.csv' --exclude '.well-known' dist/ speedypage:matthewandmaria.com"
     },
     "description": "A grayscale one page HTML theme for Bootstrap.",
     "keywords": [
