@@ -13,8 +13,16 @@ module.exports = function renderAssets() {
     upath.dirname(__filename),
     "../dist/assets/favicon.ico"
   );
-
   if (sh.test("-e", faviconPath)) {
     sh.mv(faviconPath, destPath);
+  }
+
+  // Move the .htaccess file to the root of the dist directory, if it exists
+  const htaccessPath = upath.resolve(
+    upath.dirname(__filename),
+    "../src/.htaccess"
+  );
+  if (sh.test("-e", htaccessPath)) {
+    sh.cp(htaccessPath, destPath);
   }
 };

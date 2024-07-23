@@ -3,7 +3,7 @@ const fs = require("fs");
 const upath = require("upath");
 const pug = require("pug");
 const sh = require("shelljs");
-const renderScripts = require('./render-scripts');
+const renderScripts = require("./render-scripts");
 // const prettier = require("prettier");
 
 module.exports = function renderPug(filePath) {

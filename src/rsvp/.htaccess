@@ -4,7 +4,7 @@
     AuthName "Restricted Content"
     AuthUserFile /home/mwtsh/.htpasswd
     Require valid-user
-    
+
     # do not cache numbers
     Header unset ETag
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"

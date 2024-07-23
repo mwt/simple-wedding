@@ -53,7 +53,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Toggle the aria-expanded attribute
     e.currentTarget.setAttribute(
       "aria-expanded",
-      e.currentTarget.getAttribute("aria-expanded") === "true" ? "false" : "true"
+      e.currentTarget.getAttribute("aria-expanded") === "true"
+        ? "false"
+        : "true"
     );
 
     // Toggle the collapsed class (doesn't do anything, but bootstrap does it)
