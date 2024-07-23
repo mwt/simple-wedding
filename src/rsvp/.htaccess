@@ -8,5 +8,6 @@
     # do not cache numbers
     Header unset ETag
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set CDN-Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
     ForceType text/plain
 </Files>
