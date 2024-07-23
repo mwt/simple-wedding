@@ -17,7 +17,7 @@ html(lang='pt').bg-light
         link(href='https://fonts.googleapis.com/css2?family=Parisienne&display=swap' rel='stylesheet')
 
         //- Core theme CSS (includes Bootstrap)
-        link(href='/css/styles.css' rel='stylesheet')
+        link(href='/css/styles.css?v=' + new Date().getTime(), rel='stylesheet')
 
     body#page-top.bg-white.bg-cream-paper.constrained
 
@@ -26,7 +26,7 @@ html(lang='pt').bg-light
             .container.px-4.px-lg-5
                 a.navbar-brand(href='#page-top')
                     img(src='/assets/img/mm.svg' alt='Matthew & Maria Fernanda' height='30')
-                button.navbar-toggler.navbar-toggler-right(type='button' data-bs-toggle='collapse' data-bs-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+                button#navbarToggle.navbar-toggler.navbar-toggler-right.collapsed(type='button' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
                     span.navbar-toggler-icon
                 #navbarResponsive.collapse.navbar-collapse
                     ul.navbar-nav.ms-auto
@@ -67,6 +67,9 @@ html(lang='pt').bg-light
                         span.countdown-number(aria-labelledby='label-seconds' data-countdown-unit='seconds') 00
                         span.countdown-unit(name='label-seconds') segundos
                 a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='rsvp/?p=,') RSVP agora
+
+        //- Theme JS (includes Bootstrap)
+        script!= renderScripts()
 
         //- Venue & Schedule
         section#schedule.schedule-section.bg-light.bg-handmade-paper.shadow-sm
@@ -251,6 +254,3 @@ html(lang='pt').bg-light
                         img(src='/assets/img/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
                         hr.m-0.mb-4
                         p.text-uppercase Maria Fernanda Petri Betto
-
-        //- Theme JS (includes Bootstrap)
-        script(src='/js/scripts.js')
