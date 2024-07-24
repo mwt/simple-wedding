@@ -10,6 +10,7 @@
         "build:scss": "node scripts/build-scss.js",
         "build:rsvp": "node scripts/build-rsvp.js",
         "uncss": "npm run build && php ./dist/en/rsvp/index.php >  ./dist/en/rsvp/temp.html && uncss -n -o ./dist/css/styles.css --htmlroot ./dist/ --ignoreSheets '/fonts.googleapis.com/' ./dist/en/index.html ./dist/en/rsvp/templates/success.html ./dist/en/rsvp/temp.html && rm ./dist/en/rsvp/temp.html",
+        "purgecss": "npm run build && php ./dist/en/rsvp/index.php | purgecss -v -keyframes -o ./dist/css/styles.css --css ./dist/css/styles.css --content ./dist/en/index.html ./dist/en/rsvp/templates/success.html /dev/stdin",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js",
@@ -49,10 +50,10 @@
         "postcss": "8.4.39",
         "prettier": "3.3.3",
         "pug": "3.0.3",
+        "purgecss": "^6.0.0",
         "sass": "1.77.6",
         "shelljs": "0.8.5",
-        "uglify-js": "^3.17.4",
-        "uncss": "^0.17.3",
+        "uglify-js": "^3.19.0",
         "upath": "2.0.1"
     }
 }
