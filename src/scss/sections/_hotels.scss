@@ -5,6 +5,10 @@
 .hotel-section {
     padding: 10rem 0;
 
+    img.object-fit-cover {
+        min-height: 100%;
+    }
+
     .featured-text {
         padding: 2rem;
 
