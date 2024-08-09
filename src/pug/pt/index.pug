@@ -52,7 +52,7 @@ html(lang='pt').bg-light
                     | vão se casar em 
                     time(datetime='2025-07-26 18:00:00-0300') 26 de julho de 2025
                     |  em 
-                    data(title='Rosewood São Paulo' value='R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil') São Paulo, Brazil
+                    data(title='Rosewood São Paulo' value='Al. Rio Claro, 20, São Paulo - SP, 01332-000, Brazil') São Paulo, Brazil
                 #countdown.d-flex.flex-row.justify-content-center.flex-wrap.my-4(data-countdown-date='2025-07-26 18:00:00-0300')
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                         span.countdown-number(aria-labelledby='label-days' data-countdown-unit='days') 00
@@ -79,8 +79,7 @@ html(lang='pt').bg-light
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8.text-center
                         h2.mb-4 Local &amp; Programação
-
-                        p Estamos ansiosos para comemorar esse dia especial com você! Tanto a cerimônia quanto a festa serão realizadas dentro do complexo do hotel Rosewood São Paulo. O código de vestimenta é formal e serviços de estacionamento e manobrista estão disponíveis no local.
+                        p Estamos ansiosos para comemorar esse dia especial com você! Tanto a cerimônia quanto a festa serão realizadas dentro do complexo do hotel Rosewood São Paulo, com acesso pela Al. Rio Claro, 20. Sugere-se o traje social completo. Serviço de estacionamento com manobrista está disponível no local.
 
                 //- Two Columns of Cards
                 .row.my-4
@@ -100,7 +99,7 @@ html(lang='pt').bg-light
                                 address.m-0
                                     strong Endereço:
                                     | 
-                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6' target='_blank') Capela Santa Luzia, São Paulo, Brasil
+                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6' target='_blank') Al. Rio Claro, 40, São Paulo, Brazil
 
                     //- Reception
                     .col-lg.my-4.my-lg-0
@@ -115,7 +114,7 @@ html(lang='pt').bg-light
                                 address.m-0
                                     strong Endereço:
                                     | 
-                                    a(href='https://maps.app.goo.gl/StwrtFRVXJkzAeXU8' target='_blank') R. Itapeva, 435, São Paulo, Brazil
+                                    a(href='https://maps.app.goo.gl/UyuSpFAiV3htTtyG9' target='_blank') Al. Rio Claro, 20, São Paulo, Brazil
 
                 hr
 
@@ -124,7 +123,7 @@ html(lang='pt').bg-light
                     .col-lg-8.text-center
                         h3.mb-4 Após o casamento
                         p
-                            | Como sabemos que muitos de vocês viajarão de longe para comemorar conosco, estamos planejando algumas atividades opcionais pós-casamento no Brasil nos dias seguintes ao casamento. Esperamos ter alguns eventos locais na cidade de São Paulo nos primeiros dias imediatamente após o casamento, bem como uma viagem de vários dias para a praia nos dias seguintes. 
+                            | Como sabemos que muitos de vocês viajarão de longe para comemorar conosco, estamos planejando algumas atividades opcionais pós-casamento no Brasil, tanto na cidade de São Paulo, como no litoral. 
                             strong Mais detalhes em breve.
 
         //- Registry
@@ -185,7 +184,7 @@ html(lang='pt').bg-light
                                         p
                                             strong.text-uppercase Endereço:
                                             | 
-                                            a(href='https://maps.app.goo.gl/yj3FGjuVDhVG1yix9' target='_blank') Alameda Campinas, 266, São Paulo, Brasil
+                                            a(href='https://maps.app.goo.gl/yj3FGjuVDhVG1yix9' target='_blank') Al. Campinas, 266, São Paulo, Brasil
                                     p
                                         strong.text-uppercase Faixa de preço:
                                         |  R$700-1.000/noite
@@ -240,6 +239,15 @@ html(lang='pt').bg-light
                                         strong.text-uppercase Faixa de preço:
                                         |  R$350-550/noite
 
+        //- Getting There
+        section#getting-there.getting-there-section.py-5.bg-light.bg-handmade-paper.shadow-sm
+            .container.p-4.px-lg-5
+
+                //- Bird Image
+                .row.justify-content-center
+                    .col-lg-8.text-center
+                        img.my-5.img-fluid(src='/assets/img/cbird1.png' alt='Imagem decorativa de dois pássaros pousados em um arranjo floral' loading='lazy')
+
         //- Contact
         footer.footer.small.bg-light.bg-handmade-paper.shadow-sm
             #contact.contact-section.shadow-sm.bg-spattern2
@@ -268,14 +276,18 @@ html(lang='pt').bg-light
                                     .small.text-black-50 
                                         a(href='tel:+16464910173') +1 (646) 491-0173
             .container.p-4.px-lg-5.signoff
-                .row.my-4
-                    p.valediction Esperamos vê-lo lá,
-                .row
-                    .col-lg.d-flex.flex-column.align-items-center.justify-content-end.author-signature
-                        img(src='/assets/img/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
-                        hr.m-0.mb-4
-                        p.text-uppercase Matthew W. Thomas
-                    .col-lg.d-flex.flex-column.align-items-center.justify-content-end.author-signature
-                        img(src='/assets/img/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
-                        hr.m-0.mb-4
-                        p.text-uppercase Maria Fernanda Petri Betto
+                .row.my-4.justify-content-center
+                    .col-lg.text-center
+                        img(src='/assets/img/footer-image.png' alt='Matthew & Maria Fernanda' width='1000px' loading='lazy').img-fluid
+                    .col-lg-4.d-flex.flex-column.justify-content-center
+                        .row.my-4
+                            p.valediction Esperamos vê-lo lá,
+                        .row
+                            .d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                                img(src='/assets/img/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
+                                hr.m-0.mb-4
+                                p.text-uppercase Matthew W. Thomas
+                            .d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                                img(src='/assets/img/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
+                                hr.m-0.mb-4
+                                p.text-uppercase Maria Fernanda Petri Betto

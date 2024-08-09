@@ -52,7 +52,7 @@ html(lang='en').bg-light
                     | are getting married on 
                     time(datetime='2025-07-26 18:00:00-0300') July 26, 2025
                     |  in 
-                    data(title='Rosewood São Paulo' value='R. Itapeva, 435 - Bela Vista, São Paulo - SP, 01332-000, Brazil') São Paulo, Brazil
+                    data(title='Rosewood São Paulo' value='Al. Rio Claro, 20, São Paulo - SP, 01332-000, Brazil') São Paulo, Brazil
                 #countdown.d-flex.flex-row.justify-content-center.flex-wrap.my-4(data-countdown-date='2025-07-26 18:00:00-0300')
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                         span.countdown-number(aria-labelledby='label-days' data-countdown-unit='days') 00
@@ -79,7 +79,6 @@ html(lang='en').bg-light
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8.text-center
                         h2.mb-4 Venue &amp; Schedule
-
                         p We're excited to celebrate this special day with you! Both the ceremony and reception will take place within the Rosewood São Paulo hotel's complex. The dress code is formal and parking and valet services are available onsite.
 
                 //- Two Columns of Cards
@@ -100,7 +99,7 @@ html(lang='en').bg-light
                                 address.m-0
                                     strong Address:
                                     | 
-                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6' target='_blank') Capela Santa Luzia, São Paulo, Brazil
+                                    a(href='https://maps.app.goo.gl/iyPGE872kzMptWFU6' target='_blank') Al. Rio Claro, 40, São Paulo, Brazil
 
                     //- Reception
                     .col-lg.my-4.my-lg-0
@@ -115,7 +114,7 @@ html(lang='en').bg-light
                                 address.m-0
                                     strong Address:
                                     | 
-                                    a(href='https://maps.app.goo.gl/StwrtFRVXJkzAeXU8' target='_blank') R. Itapeva, 435, São Paulo, Brazil
+                                    a(href='https://maps.app.goo.gl/UyuSpFAiV3htTtyG9' target='_blank') Al. Rio Claro, 20, São Paulo, Brazil
 
                 hr
 
@@ -185,7 +184,7 @@ html(lang='en').bg-light
                                         p
                                             strong.text-uppercase Address:
                                             | 
-                                            a(href='https://maps.app.goo.gl/yj3FGjuVDhVG1yix9' target='_blank') Alameda Campinas, 266, São Paulo, Brazil
+                                            a(href='https://maps.app.goo.gl/yj3FGjuVDhVG1yix9' target='_blank') Al. Campinas, 266, São Paulo, Brazil
                                     p 
                                         strong.text-uppercase Price range:
                                         |  $140-180/night
@@ -257,8 +256,7 @@ html(lang='en').bg-light
                         p We recommend selecting a direct flight from one of the major U.S. cities like New York (JFK), Miami (MIA), Los Angeles (LAX), Chicago (ORD) or Washington D.C. (IAD) to São Paulo's Guarulhos International Airport (GRU). #[a(href="https://www.google.com/travel/flights?q=Flights%20to%20GRU%20on%202025-07-23%20through%202025-07-30" target="_blank") Booking through travel websites like Google Flights can help you find the best fares].
                         p Note that the flight duration varies depending on the departure city, but will typically take between 8 and 12 hours.
                         p 
-                            | Ensure your passport is valid and check if a visa is required for your travel. 
-                            strong American citizens do not need a travel visa.
+                            | Ensure your passport is valid and check if a visa is required for your travel. While U.S. citizens do not currently require a visa to enter Brazil for tourism, one may be required by the time of the wedding.
 
                     //- Practical tips
                     .col-lg.my-4.my-lg-0
@@ -336,15 +334,18 @@ html(lang='en').bg-light
                                     .small.text-black-50 
                                         a(href='tel:+16464910173') +1 (646) 491-0173
             .container.p-4.px-lg-5.signoff
-                .row.my-4
-                    p.valediction
-                        | We hope to see you there,
-                .row
-                    .col-lg.d-flex.flex-column.align-items-center.justify-content-end.author-signature
-                        img(src='/assets/img/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
-                        hr.m-0.mb-4
-                        p.text-uppercase Matthew W. Thomas
-                    .col-lg.d-flex.flex-column.align-items-center.justify-content-end.author-signature
-                        img(src='/assets/img/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
-                        hr.m-0.mb-4
-                        p.text-uppercase Maria Fernanda Petri Betto
+                .row.my-4.justify-content-center
+                    .col-lg.text-center
+                        img(src='/assets/img/footer-image.png' alt='Matthew & Maria Fernanda' width='1000px' loading='lazy').img-fluid
+                    .col-lg-4.d-flex.flex-column.justify-content-center
+                        .row.my-4
+                            p.valediction We hope to see you there,
+                        .row
+                            .d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                                img(src='/assets/img/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
+                                hr.m-0.mb-4
+                                p.text-uppercase Matthew W. Thomas
+                            .d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                                img(src='/assets/img/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
+                                hr.m-0.mb-4
+                                p.text-uppercase Maria Fernanda Petri Betto
