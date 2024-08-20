@@ -336,16 +336,18 @@ html(lang='en').bg-light
             .container.p-4.px-lg-5.signoff
                 .row.my-4.justify-content-center
                     .col-lg.text-center
-                        img(src='/assets/img/footer-image.png' alt='Matthew & Maria Fernanda' width='1000px' loading='lazy').img-fluid
+                        picture
+                            source(srcset='/assets/img/footer/image.avif' type='image/avif')
+                            img(src='/assets/img/footer/image.png' alt='Matthew & Maria Fernanda' width='1000px' loading='lazy').img-fluid
                     .col-lg-4.d-flex.flex-column.justify-content-center
                         .row.my-4
                             p.valediction We hope to see you there,
                         .row
                             .d-flex.flex-column.align-items-center.justify-content-end.author-signature
-                                img(src='/assets/img/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
+                                img(src='/assets/img/footer/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
                                 hr.m-0.mb-4
                                 p.text-uppercase Matthew W. Thomas
                             .d-flex.flex-column.align-items-center.justify-content-end.author-signature
-                                img(src='/assets/img/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
+                                img(src='/assets/img/footer/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
                                 hr.m-0.mb-4
                                 p.text-uppercase Maria Fernanda Petri Betto
