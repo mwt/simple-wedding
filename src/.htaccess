@@ -1,3 +1,8 @@
+<If "%{REQUEST_METHOD} == 'POST'">
+    AuthType Basic
+    Require all granted
+</If>
+
 # BEGIN CACHE CONTROL HEADERS
 <IfModule mod_expires.c>
     # Turn on the module.

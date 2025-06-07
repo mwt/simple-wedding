@@ -10,6 +10,24 @@ html(lang='en').bg-light
 
         title Matthew &amp; Maria Fernanda | Wedding Site
 
+        //- Preload the masthead background image
+        link(rel='preload' as='image' type='image/png'
+            imagesrcset='../assets/img/card4/xs-1x.png, ../assets/img/card4/xs-2x.png 2x'
+            media='(width < 576px)'
+        )
+        link(rel='preload' as='image' type='image/png'
+            imagesrcset='../assets/img/card4/sm-1x.png, ../assets/img/card4/sm-2x.png 2x'
+            media='(576px <= width < 768px)'
+        )
+        link(rel='preload' as='image' type='image/png'
+            imagesrcset='../assets/img/card4/md-1x.png, ../assets/img/card4/md-2x.png 2x'
+            media='(768px <= width < 992px)'
+        )
+        link(rel='preload' as='image' type='image/png'
+            imagesrcset='../assets/img/card4/lg-1x.png, ../assets/img/card4/lg-2x.png 2x'
+            media='(min-width: 992px)'
+        )
+
         link(rel='icon' type='image/svg+xml' href='/assets/img/favicon.svg')
         link(rel='icon' type='image/png' href='/assets/img/favicon.png')
 
@@ -279,7 +297,9 @@ html(lang='en').bg-light
                         p We recommend selecting a direct flight from one of the major U.S. cities like New York (JFK), Miami (MIA), Los Angeles (LAX), Chicago (ORD) or Washington D.C. (IAD) to São Paulo's Guarulhos International Airport (GRU). #[a(href="https://www.google.com/travel/flights?q=Flights%20to%20GRU%20on%202025-07-23%20through%202025-08-07" target="_blank") Booking through travel websites like Google Flights can help you find the best fares].
                         p Note that the flight duration varies depending on the departure city, but will typically take between 8 and 12 hours.
                         p 
-                            | Ensure your passport is valid and check if a visa is required for your travel. While U.S. citizens do not currently require a visa to enter Brazil for tourism, one may be required by the time of the wedding.
+                            | Ensure your passport is valid and check if a visa is required for your travel. U.S. citizens require a visa to enter Brazil for tourism, one may be obtained for $80.90 USD on the 
+                            a(href='https://brazil.vfsevisa.com/' target='_blank') official e-Visa portal
+                            | . Processing times can take a few days, so apply early.
 
                     //- Practical tips
                     .col-lg.my-4.my-lg-0
