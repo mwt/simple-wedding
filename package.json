@@ -10,7 +10,7 @@
         "build:scss": "node scripts/build-scss.js",
         "build:rsvp": "node scripts/build-rsvp.js",
         "uncss": "npm run build && php ./dist/en/rsvp/index.php >  ./dist/en/rsvp/temp.html && uncss -n -o ./dist/css/styles.css --htmlroot ./dist/ --ignoreSheets '/fonts.googleapis.com/' ./dist/en/index.html ./dist/en/rsvp/templates/success.html ./dist/en/rsvp/temp.html && rm ./dist/en/rsvp/temp.html",
-        "purgecss": "npm run build && php ./dist/en/rsvp/index.php | purgecss -v -keyframes -o ./dist/css/styles.css --css ./dist/css/styles.css --content ./dist/en/index.html ./dist/en/rsvp/templates/success.html /dev/stdin",
+        "purgecss": "npm run build && purgecss -v -keyframes -o ./dist/css/styles.css --css ./dist/css/styles.css --content ./dist/en/index.html",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js",

@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Update the countdown every second
   const interval = setInterval(() => {
     const now = new Date().getTime();
-    const distance = countdownDate - now;
+    const distance = now - countdownDate;
 
     // If the countdown is over, do nothing
     if (distance < 0) {
