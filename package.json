@@ -3,13 +3,11 @@
     "name": "startbootstrap-grayscale",
     "version": "7.0.6",
     "scripts": {
-        "build": "npm run clean && npm run build:scss && npm run build:assets && npm run build:rsvp && npm run build:pug",
+        "build": "npm run clean && npm run build:scss && npm run build:assets && npm run build:pug",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
-        "build:rsvp": "node scripts/build-rsvp.js",
-        "uncss": "npm run build && php ./dist/en/rsvp/index.php >  ./dist/en/rsvp/temp.html && uncss -n -o ./dist/css/styles.css --htmlroot ./dist/ --ignoreSheets '/fonts.googleapis.com/' ./dist/en/index.html ./dist/en/rsvp/templates/success.html ./dist/en/rsvp/temp.html && rm ./dist/en/rsvp/temp.html",
         "purgecss": "npm run build && purgecss -v -keyframes -o ./dist/css/styles.css --css ./dist/css/styles.css --content ./dist/en/index.html",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
@@ -40,18 +38,18 @@
         "url": "https://github.com/StartBootstrap/startbootstrap-grayscale.git"
     },
     "dependencies": {
-        "bootstrap": "^5.3.6"
+        "bootstrap": "^5.3.7"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.21",
         "browser-sync": "^3.0.4",
         "chokidar": "^4.0.3",
-        "concurrently": "^9.1.2",
-        "postcss": "^8.5.4",
-        "prettier": "^3.5.3",
+        "concurrently": "^9.2.0",
+        "postcss": "^8.5.6",
+        "prettier": "^3.6.2",
         "pug": "^3.0.3",
         "purgecss": "^7.0.2",
-        "sass": "^1.89.1",
+        "sass": "^1.90.0",
         "shelljs": "^0.10.0",
         "uglify-js": "^3.19.3",
         "upath": "^2.0.1"
