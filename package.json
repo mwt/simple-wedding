@@ -8,7 +8,7 @@
         "build:pug": "node scripts/build-pug.js",
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
-        "purgecss": "npm run build && purgecss -v -keyframes -o ./dist/css/styles.css --css ./dist/css/styles.css --content ./dist/en/index.html",
+        "purgecss": "npm run build && purgecss -v -keyframes -o ./dist/css/styles.css --css ./dist/css/styles.css --content ./dist/en/index.html ./dist/en/album/index.html",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js",

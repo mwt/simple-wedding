@@ -1,0 +1,78 @@
+doctype html
+html(lang='en').bg-light
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='Matthew W. Thomas & Maria Fernanda Petri Betto are getting married on July 26, 2025 in São Paulo, Brazil. Join us for the celebration!')
+        meta(name='author' content='Matthew W. Thomas and Maria Fernanda Petri Betto')
+
+        title Matthew &amp; Maria Fernanda | Wedding Site
+
+        link(rel='icon' type='image/svg+xml' href='/assets/img/favicon.svg')
+        link(rel='icon' type='image/png' href='/assets/img/favicon.png')
+
+        //- Core theme CSS (includes Bootstrap)
+        link(href='/css/styles.css?v=' + new Date().getTime(), rel='stylesheet')
+
+    body.bg-white.bg-cream-paper.constrained
+
+        //- Navigation
+        nav#mainNav.navbar.navbar-expand-lg.shadow-sm
+            .container.px-4.px-lg-5
+                a.navbar-brand(href='/')
+                    img(src='/assets/img/mm.svg' alt='Matthew & Maria Fernanda' height='30')
+                ul.navbar-nav.ms-auto
+                    li.nav-item
+                        a.nav-link(href='/en/') Home
+
+        //- Video title
+        section#video.video-section.bg-primary.bg-paper-fibers.shadow-sm
+            .container.p-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.text-center.text-white
+                        h2.mb-4 Videos
+                        p Videos are coming soon.
+
+        //- Video players
+        section#video-players.video-players-section.bg-cream-paper.shadow-sm
+            .container
+                .row
+                    .col-12.col-md-6
+                        .my-5
+                    .col-12.col-md-6
+                        .my-5
+
+        //- Photo title
+        section.bg-light.bg-handmade-paper.shadow-sm
+            #album.album-section.bg-spattern2
+                .container.p-4.px-lg-5
+                    .row.gx-4.gx-lg-5.justify-content-center
+                        .col-lg-8.py-3.text-center.bg-light.bg-handmade-paper.shadow
+                            h2.mb-4 Photo Album
+                            p The photo album is not yet complete, but you can see some of the photos below.
+
+        //- Photo grid
+        section#photo-grid.photo-grid-section.bg-light.bg-paper-fibers.shadow-sm
+            .container
+                .row
+                    each focoImage in renderFoco()
+                        .col-6.col-md-4.col-lg-3.col-xl-2.p-1
+                            a(href=focoImage.src)
+                                img.foco-image.w-100.object-fit-cover.rounded(src=(focoImage.src + '?width=600&aspect_ratio=2:3') width='600' alt='' loading='lazy')
+
+        //- Footer
+        footer.footer.small.bg-secondary.bg-opacity-50.bg-handmade-paper.shadow-sm
+            .container.p-4.px-lg-5.signoff
+                .row.my-4.justify-content-center.align-items-end
+                    .col-12.col-xl-6
+                        .d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                            img(src='/assets/img/footer/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
+                            hr.m-0.mb-4
+                            p.text-uppercase Matthew W. Thomas
+                    .col-12.col-xl-6
+                        .d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                            img(src='/assets/img/footer/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
+                            hr.m-0.mb-4
+                            p.text-uppercase Maria Fernanda Petri Betto

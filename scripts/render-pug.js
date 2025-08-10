@@ -4,7 +4,7 @@ const upath = require("upath");
 const pug = require("pug");
 const sh = require("shelljs");
 const renderScripts = require("./render-scripts");
-// const prettier = require("prettier");
+const renderFoco = require("./render-foco");
 
 module.exports = function renderPug(filePath) {
   const srcPath = upath.resolve(upath.dirname(__filename), "../src");
@@ -14,6 +14,7 @@ module.exports = function renderPug(filePath) {
     filename: filePath,
     basedir: srcPath,
     renderScripts: renderScripts,
+    renderFoco: renderFoco,
   });
 
   const destPathPug = filePath.replace(/src\/pug\//, "dist/");
