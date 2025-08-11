@@ -1,20 +1,23 @@
 {
-    "title": "Grayscale",
-    "name": "startbootstrap-grayscale",
-    "version": "7.0.6",
+    "title": "Matthew and Maria Wedding Website",
+    "name": "matthewandmaria.com",
+    "version": "8.0.0",
     "scripts": {
         "build": "npm run clean && npm run build:scss && npm run build:assets && npm run build:pug",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
         "build:scripts": "node scripts/build-scripts.js",
         "build:scss": "node scripts/build-scss.js",
-        "purgecss": "npm run build && purgecss -v -keyframes -o ./dist/css/styles.css --css ./dist/css/styles.css --content ./dist/en/index.html ./dist/en/album/index.html",
+        "purgecss": "npm run build && purgecss -v -keyframes -o ./dist/css/styles.css --css ./dist/css/styles.css --content ./dist/en/index.html ./dist/en/album/index.html \"$(npm root)/simple-lightbox/dist/simpleLightbox.js\"",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js",
-        "deploy": "rsync -av --delete --exclude 'rsvp.csv' --exclude '.well-known' dist/ speedypage:matthewandmaria.com"
+        "deploy:text": "rclone sync -v --ignore-times --exclude /assets/ --disable PartialUploads --no-update-dir-modtime ./dist/ wedding-site:",
+        "deploy:assets": "rclone sync -v --size-only --disable PartialUploads --no-update-dir-modtime ./dist/assets/ wedding-site:/assets/",
+        "deploy:cdn": "wedding-site-purge.sh",
+        "deploy": "echo 'Deploying text files...' && npm run deploy:text && echo 'Deploying asset files...' && npm run deploy:assets && echo 'Purging CDN...' && npm run deploy:cdn"
     },
-    "description": "A grayscale one page HTML theme for Bootstrap.",
+    "description": "Wedding website in Bootstrap. Based on Grayscale by Start Bootstrap.",
     "keywords": [
         "css",
         "sass",
@@ -23,22 +26,23 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/grayscale",
+    "homepage": "https://matthewandmaria.com",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-grayscale/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://github.com/mwt/simple-wedding/issues",
+        "email": "hello@matthewandmaria.com"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Matthew Thomas",
     "contributors": [
-        "David Miller (https://davidmiller.io/)"
+        "Matthew Thomas (https://www.matthewthom.as/)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-grayscale.git"
+        "url": "https://github.com/mwt/simple-wedding.git"
     },
     "dependencies": {
-        "bootstrap": "^5.3.7"
+        "bootstrap": "^5.3.7",
+        "simple-lightbox": "^2.1.0"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.21",

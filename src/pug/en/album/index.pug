@@ -23,9 +23,16 @@ html(lang='en').bg-light
             .container.px-4.px-lg-5
                 a.navbar-brand(href='/')
                     img(src='/assets/img/mm.svg' alt='Matthew & Maria Fernanda' height='30')
-                ul.navbar-nav.ms-auto
-                    li.nav-item
-                        a.nav-link(href='/en/') Home
+                button#navbarToggle.navbar-toggler.navbar-toggler-right.collapsed(type='button' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto
+                        li.nav-item
+                            a.nav-link(href='/en/') Home
+                        li.nav-item
+                            a.nav-link(href='#video') Videos
+                        li.nav-item
+                            a.nav-link(href='#album') Photos
 
         //- Video title
         section#video.video-section.bg-primary.bg-paper-fibers.shadow-sm
@@ -49,18 +56,21 @@ html(lang='en').bg-light
             #album.album-section.bg-spattern2
                 .container.p-4.px-lg-5
                     .row.gx-4.gx-lg-5.justify-content-center
-                        .col-lg-8.py-3.text-center.bg-light.bg-handmade-paper.shadow
+                        .col-lg-8.py-3.text-center.bg-light.bg-paper-fibers.shadow
                             h2.mb-4 Photo Album
                             p The photo album is not yet complete, but you can see some of the photos below.
 
         //- Photo grid
-        section#photo-grid.photo-grid-section.bg-light.bg-paper-fibers.shadow-sm
+        section#photo-grid.photo-grid-section.bg-light.bg-handmade-paper.shadow-sm
             .container
-                .row
+                .row.image-gallery
                     each focoImage in renderFoco()
                         .col-6.col-md-4.col-lg-3.col-xl-2.p-1
                             a(href=focoImage.src)
-                                img.foco-image.w-100.object-fit-cover.rounded(src=(focoImage.src + '?width=600&aspect_ratio=2:3') width='600' alt='' loading='lazy')
+                                img.foco-image.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded(src=(focoImage.src + '?width=600&aspect_ratio=2:3') width='600' alt='' loading='lazy')
+
+        //- Theme JS
+        script!= renderScripts(["simple-lightbox", "album"])
 
         //- Footer
         footer.footer.small.bg-secondary.bg-opacity-50.bg-handmade-paper.shadow-sm
