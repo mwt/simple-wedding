@@ -5,8 +5,9 @@ const UglifyJS = require("uglify-js");
 
 module.exports = function renderScripts(includedScripts = ["simple-lightbox", "homepage", "album"]) {
   // Get path to simple-lightbox
-  const sourcePathSimpleLightbox = require.resolve(
-    "simple-lightbox/dist/simpleLightbox.js"
+  const sourcePathSimpleLightbox = upath.resolve(
+    upath.dirname(__filename),
+    "../src/js/simple-lightbox.js"
   );
 
   // Get path to homepage script
