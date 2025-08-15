@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   =============================================================================*/
 
   // Initialize the image gallery lightbox
-  new SimpleLightbox({ elements: ".image-gallery a" });
+  new SimpleLightbox({ elements: ".image-gallery a", urlAttribute: "data-lightbox" });
 
   /*=============================================================================
    Mobile Navbar Section

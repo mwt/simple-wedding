@@ -10,10 +10,13 @@ module.exports = function renderScripts() {
 
   // Make data structure for foco images using destination paths
   const focoImages = fs
-    .readdirSync(focoFolderPath, { recursive: true })
+    .readdirSync(focoFolderPath, { withFileTypes: true })
+    .filter((dirent) => dirent.isFile() && dirent.name.endsWith(".jpg"))
     .map((file) => {
       return {
-        src: upath.join("/assets/img/foco/", file),
+        src: upath.join("/assets/img/foco/", file.name),
+        thumb: upath.join("/assets/img/foco/thumb/", file.name),
+        lightbox: upath.join("/assets/img/foco/lightbox/", file.name),
       };
     });
 

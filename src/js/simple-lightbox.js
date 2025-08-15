@@ -503,30 +503,6 @@
 
     };
 
-    SimpleLightbox.registerAsJqueryPlugin = function($) {
-
-        $.fn.simpleLightbox = function(options) {
-
-            var lightboxInstance;
-            var $items = this;
-
-            return this.each(function() {
-                if (!$.data(this, 'simpleLightbox')) {
-                    lightboxInstance = lightboxInstance || new SimpleLightbox($.extend({}, options, {$items: $items}));
-                    $.data(this, 'simpleLightbox', lightboxInstance);
-                }
-            });
-
-        };
-
-        $.SimpleLightbox = SimpleLightbox;
-
-    };
-
-    if (typeof window !== 'undefined' && window.jQuery) {
-        SimpleLightbox.registerAsJqueryPlugin(window.jQuery);
-    }
-
     return SimpleLightbox;
 
 }));
