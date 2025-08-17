@@ -9,6 +9,7 @@
 
 html {
     scroll-padding-top: calc(4.5rem - 1px);
+    scrollbar-gutter: stable;
 }
 
 body.constrained {
