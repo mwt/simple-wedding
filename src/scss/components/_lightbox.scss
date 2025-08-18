@@ -54,6 +54,9 @@
 
 .slbContent {
   position: relative;
+  height: 100svh;
+  width: 100svw;
+  max-width: 100%;
 }
 
 .slbContentEl .slbContent {
@@ -80,8 +83,6 @@
   bottom: 5em;
   display: block;
   z-index: -1;
-  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.6);
-  background-color: #FFF;
 }
 
 .slbDirectionNext .slbImageWrap {
@@ -100,11 +101,13 @@
   width: auto;
   max-width: 100%;
   height: auto;
+  height: 100svh;
   display: block;
   line-height: 0;
   box-sizing: border-box;
   padding: 5em 0;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 .slbCaption {
@@ -159,21 +162,19 @@
   height: 1.66667em;
   line-height: 1.66667em;
   position: absolute;
-  right: -0.33333em;
+  right: 0;
   top: 0;
   color: #fff;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
 }
 
-.slbLoading .slbCloseBtn {
-  display: none;
-}
-
 .slbLoadingText {
   font-size: 1.4em;
   color: #fff;
   color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding-top: calc(50svh - 1.4em);
 }
 
 .slbArrows {
