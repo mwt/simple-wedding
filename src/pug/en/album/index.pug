@@ -34,9 +34,13 @@ html(lang='en').bg-light
                         li.nav-item
                             a.nav-link(href='#album') Photos
 
-        //- White spacer
+        //- Header
         .bg-light.bg-cream-paper.shadow-sm
             #album-top-space.bg-spattern5
+                .container.p-5.px-lg-5
+                    .row.gx-4.gx-lg-5.justify-content-center
+                        .col-lg-6.py-3.text-center.bg-light.bg-handmade-paper.shadow
+                            h1.my-3 Our Wedding Album
 
         //- Video title
         section#video.video-section.bg-primary.bg-paper-fibers.shadow-sm
@@ -50,8 +54,8 @@ html(lang='en').bg-light
         //- Video players
         section#video-players.video-grid-section.bg-handmade-paper.shadow-sm
             .container
-                .row.main-video.mb-3
-                    .ratio.ratio-16x9.p-1
+                .row.main-video.mb-3.mx-1
+                    .ratio.ratio-16x9.p-0
                         iframe(src="https://player.mediadelivery.net/embed/478999/a47aac33-0ec7-4f8b-b991-f63efb192229?autoplay=false&loop=false&muted=false&preload=false&responsive=true" allowfullscreen)
 
                 .row.video-gallery.mb-3

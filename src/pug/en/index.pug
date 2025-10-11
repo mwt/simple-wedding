@@ -56,6 +56,8 @@ html(lang='en').bg-light
                             a.nav-link(href='#hotels') Accommodations
                         li.nav-item
                             a.nav-link(href='#todo') Travel Guide
+                        li.nav-item
+                            a.nav-link(href='/en/album/') Photos &amp; Videos
 
         //- Masthead
         header.masthead.d-flex.flex-row.text-secondary.bg-light.bg-cream-paper.border-top.border-bottom.border-secondary-subtle.shadow-sm
@@ -84,7 +86,7 @@ html(lang='en').bg-light
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                         span.countdown-number(aria-labelledby='label-seconds' data-countdown-unit='seconds') 00
                         span.countdown-unit(name='label-seconds') seconds
-                a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='/en/album/') Photos and Video
+                a.mx-auto.btn.btn-primary.fw-bold.bg-paper-fibers.cutout-text(href='/en/album/') Photos and Videos
 
         //- Theme JS (includes Bootstrap)
         script!= renderScripts(["homepage"])
@@ -175,7 +177,7 @@ html(lang='en').bg-light
                         h2.mb-4 Registry
                         p
                             strong You can find our registry on myregistry.com. This service aggregates several smaller registries with Crate &amp; Barrel, Lenox, Pottery Barn, and OXO.
-                        a.btn.btn-warning.fw-bold.bg-paper-fibers(href='https://www.myregistry.com/giftlist/matthewandmaria' role='button' target='_blank') View Our Registry
+                        a.btn.btn-warning.fw-bold.bg-paper-fibers.disabled(href='' role='button') View Our Registry
 
         //- Hotels
         section#hotels.hotel-section.bg-light.bg-cream-paper.shadow-sm
