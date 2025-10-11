@@ -9,6 +9,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
    Simple Lightbox Section
   =============================================================================*/
 
+  // Initialize the video gallery lightbox
+  new SimpleLightbox({ elements: ".video-gallery a" });
+
   // Initialize the image gallery lightbox
   new SimpleLightbox({ elements: ".image-gallery a", urlAttribute: "data-lightbox" });
 

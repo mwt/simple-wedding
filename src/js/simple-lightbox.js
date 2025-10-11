@@ -112,7 +112,7 @@
         beforeDestroy: null,
         afterDestroy: null,
 
-        videoRegex: new RegExp(/youtube.com|vimeo.com/) // regex which tests load url for iframe content
+        videoRegex: new RegExp(/youtube.com|vimeo.com|player.mediadelivery.net/) // regex which tests load url for iframe content
 
     };
 
