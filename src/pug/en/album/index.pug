@@ -34,17 +34,21 @@ html(lang='en').bg-light
                         li.nav-item
                             a.nav-link(href='#album') Photos
 
+        //- White spacer
+        .bg-light.bg-cream-paper.shadow-sm
+            #album-top-space.bg-spattern5
+
         //- Video title
         section#video.video-section.bg-primary.bg-paper-fibers.shadow-sm
             .container.p-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8.text-center.text-white
-                        h2.mb-4 Videos
+                        h2.my-3 Videos
                         p
                             strong The top video is a 45 minute documentary of the entire wedding day from start to finish. There is also a gallery of shorter highlight videos below.
 
         //- Video players
-        section#video-players.video-grid-section.bg-cream-paper.shadow-sm
+        section#video-players.video-grid-section.bg-handmade-paper.shadow-sm
             .container
                 .row.main-video.mb-3
                     .ratio.ratio-16x9.p-1
@@ -57,16 +61,16 @@ html(lang='en').bg-light
                                 img.foco-thumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded(src='https://vz-d9b6b4f2-1f8.b-cdn.net/' + videoId + '/thumbnail.jpg' width='600' alt='' loading='lazy')
 
         //- Photo title
-        section.bg-light.bg-handmade-paper.shadow-sm
+        section.bg-info.bg-paper-fibers.shadow-sm
             #album.album-section.bg-spattern2
                 .container.p-4.px-lg-5
                     .row.gx-4.gx-lg-5.justify-content-center
-                        .col-lg-8.py-3.text-center.bg-light.bg-paper-fibers.shadow
-                            h2.mb-4 Photo Album
+                        .col-lg-8.py-3.text-center.bg-light.bg-handmade-paper.shadow
+                            h2.my-3 Photo Album
                             p The photo album is not yet complete, but you can see some of the photos below.
 
         //- Photo grid
-        section#photo-grid.photo-grid-section.bg-light.bg-handmade-paper.shadow-sm
+        section#photo-grid.photo-grid-section.bg-light.bg-cream-paper.shadow-sm
             .container
                 .row.image-gallery
                     each focoImage in renderFoco()
