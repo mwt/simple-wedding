@@ -67,3 +67,16 @@ Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework
 ## Copyright and License
 
 Copyright 2013-2023 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE) license.
+
+## Command to generate the video preview images
+
+```bash
+ffmpeg -i "./maria_fernanda_e_matthew_1-_same_day_edit (1080p).mp4" -ss 14 -t 5 -vf "fps=fps=20,scale=400:-1" -loop 0 -an -compression_level 6 -quality 85 cdf433e4-6af0-4695-8a14-60ea631b3996.webp
+ffmpeg -i "./maria_fernanda_e_matthew_-_2 (1080p).mp4" -ss 14 -t 5 -vf "fps=fps=20,scale=400:-1" -loop 0 -an -compression_level 6 -quality 85 54ccf4ea-4d46-4b46-b9c8-6083a5e07cb6.webp
+ffmpeg -i "./maria_fernanda_e_matthew_-_3 (1080p).mp4" -ss 3 -t 5 -vf "fps=fps=20,scale=400:-1" -loop 0 -an -compression_level 6 -quality 85 2b0884bb-5d40-4404-8533-4f73b3be870d.webp
+ffmpeg -i "./maria_fernanda_e_matthew_-_4 (1080p).mp4" -ss 3 -t 5 -vf "fps=fps=20,scale=400:-1" -loop 0 -an -compression_level 6 -quality 85 b4b2d99d-8522-4c4a-acd6-90a755256161.webp
+ffmpeg -i "./maria_fernanda_e_matthew_-_5 (1080p).mp4" -ss 15.5 -t 5 -vf "fps=fps=20,scale=400:-1" -loop 0 -an -compression_level 6 -quality 85 95af1da0-8a35-46d1-9467-e510c3ad2235.webp
+ffmpeg -i "./maria_fernanda_e_matthew_-_6 (1080p).mp4" -ss 1 -t 5 -vf "fps=fps=20,scale=400:-1" -loop 0 -an -compression_level 6 -quality 85 c666f123-e1c5-4cad-8329-1a542d04e5a9.webp
+ffmpeg -i "./maria_fernanda_e_matthew_-_7 (1080p).mp4" -ss 10 -t 5 -vf "fps=fps=20,scale=400:-1" -loop 0 -an -compression_level 6 -quality 85 7726645d-5e58-4010-af96-ae06bd20505d.webp
+ffmpeg -i "./maria_fernanda_e_matthew_-_8 (1080p).mp4" -ss 0 -t 5 -vf "fps=fps=20,scale=400:-1" -loop 0 -an -compression_level 6 -quality 85 3ad39180-5c11-4d61-bb9f-ef93d1f99bf6.webp
+```

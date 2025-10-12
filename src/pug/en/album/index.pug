@@ -10,6 +10,14 @@ html(lang='en').bg-light
 
         title Matthew &amp; Maria Fernanda | Wedding Album
 
+        //- Preload the header background image
+        link(rel='preload' as='image' type='image/png'
+            imagesrcset='/assets/img/spattern5/1x.png, /assets/img/spattern5/2x.png 2x'
+        )
+
+        //- Preconnect to the video CDN
+        link(rel='preconnect' href='https://player.mediadelivery.net')
+
         link(rel='icon' type='image/svg+xml' href='/assets/img/favicon.svg')
         link(rel='icon' type='image/png' href='/assets/img/favicon.png')
 
@@ -63,15 +71,15 @@ html(lang='en').bg-light
         //- Video players
         section#video-players.video-grid-section.bg-handmade-paper.shadow-sm
             .container
-                .row.main-video.mb-3.mx-1
+                .row.main-video.mb-3.mx-xl-1
                     .ratio.ratio-16x9.p-0
                         iframe(src="https://player.mediadelivery.net/embed/478999/a47aac33-0ec7-4f8b-b991-f63efb192229?autoplay=false&loop=false&muted=false&preload=false&responsive=true" allowfullscreen)
 
-                .row.video-gallery.mb-3
+                .row.video-gallery.mb-3.px-xl-3
                     each videoId in ['cdf433e4-6af0-4695-8a14-60ea631b3996', '54ccf4ea-4d46-4b46-b9c8-6083a5e07cb6', '2b0884bb-5d40-4404-8533-4f73b3be870d', 'b4b2d99d-8522-4c4a-acd6-90a755256161', '95af1da0-8a35-46d1-9467-e510c3ad2235', 'c666f123-e1c5-4cad-8329-1a542d04e5a9', '7726645d-5e58-4010-af96-ae06bd20505d', '3ad39180-5c11-4d61-bb9f-ef93d1f99bf6']
                         .col-6.col-lg-3.p-1
                             a(href='https://player.mediadelivery.net/embed/478999/' + videoId + '?autoplay=false&loop=false&muted=false&preload=true&responsive=true')
-                                img.foco-thumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded(src='https://vz-d9b6b4f2-1f8.b-cdn.net/' + videoId + '/preview.webp' width='600' alt='' loading='lazy')
+                                img.foco-thumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded(src='/assets/img/foco/vid-preview/' + videoId + '.webp' width='400' alt='' loading='lazy')
 
         //- Photo title
         section.bg-info.bg-paper-fibers.shadow-sm
