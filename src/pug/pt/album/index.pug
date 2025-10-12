@@ -1,0 +1,119 @@
+doctype html
+html(lang='pt').bg-light
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='Matthew W. Thomas e Maria Fernanda Petri Betto celebraram seu casamento no dia 26 de julho de 2025 em São Paulo, Brasil. Aqui estão alguns vídeos e fotos do nosso dia especial.')
+        meta(name='author' content='Matthew W. Thomas e Maria Fernanda Petri Betto')
+
+        title Matthew &amp; Maria Fernanda | Álbum de Casamento
+
+        //- Preload the header background image
+        link(rel='preload' as='image' type='image/png'
+            imagesrcset='/assets/img/spattern5/1x.png, /assets/img/spattern5/2x.png 2x'
+        )
+
+        //- Preconnect to the video CDN
+        link(rel='preconnect' href='https://player.mediadelivery.net')
+        link(rel='preconnect' href='https://vz-d9b6b4f2-1f8.b-cdn.net')
+
+        link(rel='icon' type='image/svg+xml' href='/assets/img/favicon.svg')
+        link(rel='icon' type='image/png' href='/assets/img/favicon.png')
+
+        //- Core theme CSS (includes Bootstrap)
+        link(href='/css/styles.css?v=' + new Date().getTime(), rel='stylesheet')
+
+        //- Open graph meta tags for social media link previews
+        meta(property='og:title' content="Álbum de Casamento de Matthew e Maria Fernanda")
+        meta(property='og:description' content='Matthew W. Thomas e Maria Fernanda Petri Betto celebraram seu casamento no dia 26 de julho de 2025 em São Paulo, Brasil. Aqui estão alguns vídeos e fotos do nosso dia especial.')
+        meta(property='og:type' content='website')
+        meta(property='og:url' content='https://www.matthewandmaria.com/pt/album/')
+        meta(property='og:image' content='https://matthewandmaria.com/assets/img/foco/lightbox/156-_ota7658_54700217194_o.jpg')
+        meta(property='og:image:width' content='1600')
+        meta(property='og:image:height' content='1067')
+
+    body.bg-white.bg-cream-paper.constrained
+
+        //- Navigation
+        nav#mainNav.navbar.navbar-expand-lg.shadow-sm
+            .container.px-4.px-lg-5
+                a.navbar-brand(href='/pt/')
+                    img(src='/assets/img/mm.svg' alt='Matthew & Maria Fernanda' height='30')
+                button#navbarToggle.navbar-toggler.navbar-toggler-right.collapsed(type='button' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Alternar navegação')
+                    span.navbar-toggler-icon
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ms-auto
+                        li.nav-item
+                            a.nav-link(href='/pt/') Home
+                        li.nav-item
+                            a.nav-link(href='#video') Vídeos
+                        li.nav-item
+                            a.nav-link(href='#album') Fotos
+
+        //- Header
+        section#album-top-space.bg-light.bg-cream-paper.shadow-sm
+            .bg-spattern5
+                .container.p-5.px-lg-5
+                    .row.gx-4.gx-lg-5.justify-content-center
+                        .col-lg-6.py-3.text-center.bg-light.bg-handmade-paper.inset-header
+                            h1.my-3 Álbum de Casamento
+
+        //- Video title
+        section#video.video-section.bg-primary.bg-paper-fibers.shadow-sm
+            .container.p-4.px-lg-5
+                .row.gx-4.gx-lg-5.justify-content-center
+                    .col-lg-8.text-center.text-white
+                        h2.my-3 Vídeos
+                        p
+                            strong O vídeo principal é um documentário de 45 minutos de todo o dia do casamento, do início ao fim. Também há uma galeria de vídeos curtos abaixo.
+
+        //- Video players
+        section#video-players.video-grid-section.bg-handmade-paper.shadow-sm
+            .container
+                .row.main-video.mb-3.mx-xl-1
+                    .ratio.ratio-16x9.p-0
+                        iframe(src="https://player.mediadelivery.net/embed/478999/a47aac33-0ec7-4f8b-b991-f63efb192229?autoplay=false&loop=false&muted=false&preload=false&responsive=true&lang=pt" title="Vídeo documentário de casamento de 45 minutos" allowfullscreen)
+
+                .row.video-gallery.mb-3.px-xl-3
+                    each videoId in ['cdf433e4-6af0-4695-8a14-60ea631b3996', '54ccf4ea-4d46-4b46-b9c8-6083a5e07cb6', '2b0884bb-5d40-4404-8533-4f73b3be870d', 'b4b2d99d-8522-4c4a-acd6-90a755256161', '95af1da0-8a35-46d1-9467-e510c3ad2235', 'c666f123-e1c5-4cad-8329-1a542d04e5a9', '7726645d-5e58-4010-af96-ae06bd20505d', '3ad39180-5c11-4d61-bb9f-ef93d1f99bf6']
+                        .col-6.col-lg-3.p-1
+                            a(href='https://player.mediadelivery.net/embed/478999/' + videoId + '?autoplay=false&loop=false&muted=false&preload=true&responsive=true&lang=pt')
+                                img.foco-vthumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded.fs-2.text-center(src='/assets/img/foco/vid-preview/' + videoId + '.webp' width='400' alt='Clique para reproduzir o vídeo' loading='lazy')
+
+        //- Photo title
+        section.bg-info.bg-paper-fibers.shadow-sm
+            #album.album-section.bg-spattern2
+                .container.p-4.px-lg-5
+                    .row.gx-4.gx-lg-5.justify-content-center
+                        .col-lg-8.py-3.text-center.bg-light.bg-handmade-paper.shadow
+                            h2.my-3 Álbum de Fotos
+                            p Aqui estão algumas das nossas fotos favoritas do dia do casamento. Clique em qualquer foto para ver uma versão maior. Para baixar as imagens em resolução total, clique com o botão direito (ou mantenha pressionado no celular) e selecione "Abrir link em nova guia" (ou opção similar) e, em seguida, salve a imagem a partir daí.
+
+        //- Photo grid
+        section#photo-grid.photo-grid-section.bg-light.bg-cream-paper.shadow-sm
+            .container
+                .row.image-gallery
+                    each focoImage in renderFoco()
+                        .col-6.col-md-4.col-lg-3.col-xl-2.p-1
+                            a(href=focoImage.src data-lightbox=focoImage.lightbox)
+                                img.foco-image.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded.fs-2.text-center(src=focoImage.thumb width='600' alt='Clique para ver a imagem maior' loading='lazy')
+
+        //- Theme JS
+        script!= renderScripts(["simple-lightbox", "album"])
+
+        //- Footer
+        footer.footer.small.bg-secondary.bg-opacity-50.bg-handmade-paper.shadow-sm
+            .container.p-4.px-lg-5.signoff
+                .row.my-4.justify-content-center.align-items-end
+                    .col-12.col-xl-6
+                        .d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                            img(src='/assets/img/footer/signature-mwt.svg' alt='Matthew W. Thomas' width='300' loading='lazy')
+                            hr.m-0.mb-4
+                            p.text-uppercase Matthew W. Thomas
+                    .col-12.col-xl-6
+                        .d-flex.flex-column.align-items-center.justify-content-end.author-signature
+                            img(src='/assets/img/footer/signature-mfpb.svg' alt='Maria Fernanda Petri Betto' width='300' loading='lazy')
+                            hr.m-0.mb-4
+                            p.text-uppercase Maria Fernanda Petri Betto
