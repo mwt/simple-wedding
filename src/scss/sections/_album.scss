@@ -2,14 +2,17 @@
     box-shadow: inset var(--bs-box-shadow-sm);
 }
 
-.video-grid-section {
+.photo-grid-section, .video-grid-section {
     padding: 1rem 0;
-}
 
-.photo-grid-section {
-    padding: 1rem 0;
+    .foco-vthumb {
+        aspect-ratio: 16/9;
+        display: block;
+    }
 
     .foco-image {
         aspect-ratio: 2/3;
+        display: block;
     }
+
 }
