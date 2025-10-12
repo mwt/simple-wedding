@@ -5,7 +5,7 @@ html(lang='pt').bg-light
 
         meta(charset='utf-8')
         meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description' content='Matthew W. Thomas e Maria Fernanda Petri Betto vão se casar em 26 de julho de 2025 em São Paulo, Brasil. Junte-se a nós para a celebração!')
+        meta(name='description' content='Matthew W. Thomas e Maria Fernanda Petri Betto celebraram seu casamento no dia 26 de julho de 2025 em São Paulo, Brasil. Esperamos que tenham gostado da celebração!')
         meta(name='author' content='Matthew W. Thomas and Maria Fernanda Petri Betto')
 
         title Matthew &amp; Maria Fernanda | Site de Casamento
@@ -37,6 +37,15 @@ html(lang='pt').bg-light
         //- Core theme CSS (includes Bootstrap)
         link(href='/css/styles.css?v=' + new Date().getTime(), rel='stylesheet')
 
+        //- Open graph meta tags for social media link previews
+        meta(property='og:title' content="Site de Casamento de Matthew &amp; Maria Fernanda")
+        meta(property='og:description' content='Matthew W. Thomas e Maria Fernanda Petri Betto celebraram seu casamento no dia 26 de julho de 2025 em São Paulo, Brasil. Esperamos que tenham gostado da celebração!')
+        meta(property='og:type' content='website')
+        meta(property='og:url' content='https://www.matthewandmaria.com/pt/')
+        meta(property='og:image' content='https://matthewandmaria.com/assets/img/foco/lightbox/156-_ota7658_54700217194_o.jpg')
+        meta(property='og:image:width' content='1600')
+        meta(property='og:image:height' content='1067')
+
     body#page-top.bg-white.bg-cream-paper.constrained
 
         //- Navigation
@@ -67,10 +76,10 @@ html(lang='pt').bg-light
                     |  &amp; 
                     span Maria Fernanda
                 h2.text-center
-                    | se casaram em 
+                    | celebraram seu casamento no dia 
                     time(datetime='2025-07-26 18:00:00-0300') 26 de julho de 2025
                     |  em 
-                    data(title='Rosewood São Paulo' value='Al. Rio Claro, 20, São Paulo - SP, 01332-000, Brazil') São Paulo, Brazil
+                    data(title='Rosewood São Paulo' value='Al. Rio Claro, 20, São Paulo - SP, 01332-000, Brasil') São Paulo, Brasil
                 #countdown.d-flex.flex-row.justify-content-center.flex-wrap.my-4(data-countdown-date='2025-07-26 18:00:00-0300')
                     .d-flex.flex-column.align-items-center.p-2.m-2.bg-primary.bg-paper-fibers.cutout-text.shadow-sm.rounded
                         span.countdown-number(aria-labelledby='label-days' data-countdown-unit='days') 00

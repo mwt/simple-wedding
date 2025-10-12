@@ -5,16 +5,25 @@ html(lang='en').bg-light
 
         meta(charset='utf-8')
         meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description' content='Matthew W. Thomas & Maria Fernanda Petri Betto are getting married on July 26, 2025 in São Paulo, Brazil. Join us for the celebration!')
+        meta(name='description' content='Matthew W. Thomas & Maria Fernanda Petri Betto are getting married on July 26, 2025 in São Paulo, Brazil. Here are some videos and photos from our special day.')
         meta(name='author' content='Matthew W. Thomas and Maria Fernanda Petri Betto')
 
-        title Matthew &amp; Maria Fernanda | Wedding Site
+        title Matthew &amp; Maria Fernanda | Wedding Album
 
         link(rel='icon' type='image/svg+xml' href='/assets/img/favicon.svg')
         link(rel='icon' type='image/png' href='/assets/img/favicon.png')
 
         //- Core theme CSS (includes Bootstrap)
         link(href='/css/styles.css?v=' + new Date().getTime(), rel='stylesheet')
+
+        //- Open graph meta tags for social media link previews
+        meta(property='og:title' content="Matthew & Maria Fernanda's Wedding Album")
+        meta(property='og:description' content='Matthew W. Thomas & Maria Fernanda Petri Betto were married on July 26, 2025 in São Paulo, Brazil. Here are some videos and photos from our special day.')
+        meta(property='og:type' content='website')
+        meta(property='og:url' content='https://www.matthewandmaria.com/en/album/')
+        meta(property='og:image' content='https://matthewandmaria.com/assets/img/foco/lightbox/156-_ota7658_54700217194_o.jpg')
+        meta(property='og:image:width' content='1600')
+        meta(property='og:image:height' content='1067')
 
     body.bg-white.bg-cream-paper.constrained
 
@@ -35,11 +44,11 @@ html(lang='en').bg-light
                             a.nav-link(href='#album') Photos
 
         //- Header
-        .bg-light.bg-cream-paper.shadow-sm
-            #album-top-space.bg-spattern5
+        section#album-top-space.bg-light.bg-cream-paper.shadow-sm
+            .bg-spattern5
                 .container.p-5.px-lg-5
                     .row.gx-4.gx-lg-5.justify-content-center
-                        .col-lg-6.py-3.text-center.bg-light.bg-handmade-paper.shadow
+                        .col-lg-6.pt-4.pb-3.text-center.bg-light.bg-handmade-paper.inset-header
                             h1.my-3 Our Wedding Album
 
         //- Video title
@@ -62,7 +71,7 @@ html(lang='en').bg-light
                     each videoId in ['cdf433e4-6af0-4695-8a14-60ea631b3996', '54ccf4ea-4d46-4b46-b9c8-6083a5e07cb6', '2b0884bb-5d40-4404-8533-4f73b3be870d', 'b4b2d99d-8522-4c4a-acd6-90a755256161', '95af1da0-8a35-46d1-9467-e510c3ad2235', 'c666f123-e1c5-4cad-8329-1a542d04e5a9', '7726645d-5e58-4010-af96-ae06bd20505d', '3ad39180-5c11-4d61-bb9f-ef93d1f99bf6']
                         .col-6.col-lg-3.p-1
                             a(href='https://player.mediadelivery.net/embed/478999/' + videoId + '?autoplay=false&loop=false&muted=false&preload=true&responsive=true')
-                                img.foco-thumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded(src='https://vz-d9b6b4f2-1f8.b-cdn.net/' + videoId + '/thumbnail.jpg' width='600' alt='' loading='lazy')
+                                img.foco-thumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded(src='https://vz-d9b6b4f2-1f8.b-cdn.net/' + videoId + '/preview.webp' width='600' alt='' loading='lazy')
 
         //- Photo title
         section.bg-info.bg-paper-fibers.shadow-sm
