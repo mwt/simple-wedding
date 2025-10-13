@@ -276,8 +276,11 @@
 
             if (this.options.videoRegex.test(url)) {
 
+                // If video url ends with "#vertical", add a class to the iframe for vertical video styling
+                var iframeClass = url.endsWith('#vertical') ? 'slbIframe iframe-vertical' : 'slbIframe';
+                // Remove the "#vertical" part from the URL if present
                 callback.call(self, parseHtml(
-                    '<div class="slbIframeCont"><iframe class="slbIframe" frameborder="0" allowfullscreen src="' + url + '"></iframe></div>')
+                    '<div class="slbIframeCont"><iframe class="' + iframeClass + '" frameborder="0" allowfullscreen src="' + url.replace(/#vertical$/, '') + '"></iframe></div>')
                 );
 
             } else {

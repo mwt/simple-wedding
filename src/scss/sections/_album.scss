@@ -5,12 +5,17 @@
 .photo-grid-section, .video-grid-section {
     padding: 1rem 0;
 
-    .foco-vthumb {
+    .hthumb {
         aspect-ratio: 16/9;
         display: block;
     }
 
-    .foco-image {
+    .vthumb916 {
+        aspect-ratio: 9/16;
+        display: block;
+    }
+
+    .vthumb {
         aspect-ratio: 2/3;
         display: block;
     }

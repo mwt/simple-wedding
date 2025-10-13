@@ -77,10 +77,16 @@ html(lang='pt').bg-light
                         iframe(src="https://player.mediadelivery.net/embed/478999/a47aac33-0ec7-4f8b-b991-f63efb192229?autoplay=false&loop=false&muted=false&preload=false&responsive=true&lang=pt" title="Vídeo documentário de casamento de 45 minutos" allowfullscreen)
 
                 .row.video-gallery.mb-3.px-xl-3
-                    each videoId in ['cdf433e4-6af0-4695-8a14-60ea631b3996', '54ccf4ea-4d46-4b46-b9c8-6083a5e07cb6', '2b0884bb-5d40-4404-8533-4f73b3be870d', 'b4b2d99d-8522-4c4a-acd6-90a755256161', '95af1da0-8a35-46d1-9467-e510c3ad2235', 'c666f123-e1c5-4cad-8329-1a542d04e5a9', '7726645d-5e58-4010-af96-ae06bd20505d', '3ad39180-5c11-4d61-bb9f-ef93d1f99bf6']
+                    //- Foco videos
+                    each videoId in ['eae0478f-242d-4d37-a024-bfa1dc551909', 'ec1f0219-e954-4654-a9ea-5c21e358cc1d', '14776d79-be6e-4681-af7b-b11de0332c84', '050b0c3d-f3e9-4423-8109-f32ccab60f0f', '99db335d-e048-487a-8aad-7bf2f33a37ee', '4ce971eb-1c75-4440-b167-ea2d37a22a31', '8a395124-c6c9-4892-a9b3-9149cef5a1e0', '3a09980c-8d1c-41a4-9dc3-120cd5ae4d66']
                         .col-6.col-lg-3.p-1
                             a(href='https://player.mediadelivery.net/embed/478999/' + videoId + '?autoplay=false&loop=false&muted=false&preload=true&responsive=true&lang=pt')
-                                img.foco-vthumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded.fs-2.text-center(src='/assets/img/foco/vid-preview/' + videoId + '.jpg' width='400' alt='Clique para reproduzir o vídeo' loading='lazy')
+                                img.hthumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded.fs-2.text-center(src='/assets/img/foco/vid-preview/' + videoId + '.jpg' width='400' alt='Clique para reproduzir o vídeo' loading='lazy')
+                    //- Instagram vertical videos
+                    each videoId in ['c3122260-1603-4781-b0bc-e2548e877639', '2e014771-c98b-4d50-b5e3-cc3fa807bb5b', '0a0280a6-7712-4ce8-a24d-68679bfa1716', '3d954e2a-3eec-4e9f-b6be-5169e28bea7c', 'c9bc0e6c-6049-4275-9b01-0f783185abe0', 'c2828f69-dff9-4b5e-bbf3-9fed2ca45a46']
+                        .col-4.col-lg-2.p-1
+                            a(href='https://player.mediadelivery.net/embed/478999/' + videoId + '?autoplay=false&loop=false&muted=false&preload=true&responsive=true&lang=pt#vertical')
+                                img.vthumb916.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded.fs-2.text-center(src='/assets/img/foco/vid-preview/' + videoId + '.jpg' width='400' alt='Clique para reproduzir o vídeo' loading='lazy')
 
         //- Photo title
         section.bg-info.bg-paper-fibers.shadow-sm
@@ -98,7 +104,7 @@ html(lang='pt').bg-light
                     each focoImage in renderFoco()
                         .col-6.col-md-4.col-lg-3.col-xl-2.p-1
                             a(href=focoImage.src data-lightbox=focoImage.lightbox)
-                                img.foco-image.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded.fs-2.text-center(src=focoImage.thumb width='600' alt='Clique para ver a imagem maior' loading='lazy')
+                                img.vthumb.w-100.object-fit-cover.border.border-white.border-4.shadow-sm.rounded.fs-2.text-center(src=focoImage.thumb width='600' alt='Clique para ver a imagem maior' loading='lazy')
 
         //- Theme JS
         script!= renderScripts(["simple-lightbox", "album"])

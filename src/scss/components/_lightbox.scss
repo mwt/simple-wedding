@@ -247,6 +247,12 @@
   aspect-ratio: 16 / 9;
 }
 
+.slbIframe.iframe-vertical {
+  height: 1920px;
+  width: auto;
+  aspect-ratio: 9 / 16;
+}
+
 @-webkit-keyframes slbOverlay {
   from {
     opacity: 0;
