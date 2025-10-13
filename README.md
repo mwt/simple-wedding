@@ -16,7 +16,7 @@ ffmpeg -i "./maria_fernanda_e_matthew_-_5 (1080p).mp4"              -ss 15.5 -t 
 ffmpeg -i "./maria_fernanda_e_matthew_-_6 (1080p).mp4"              -ss 1    -t 5 -vf "fps=fps=20,scale=480:270" -loop 0 -c:v libsvtav1 -preset 5 -svtav1-params fast-decode=1 -b:v 64k -an 4ce971eb-1c75-4440-b167-ea2d37a22a31.jpg.avif
 ffmpeg -i "./maria_fernanda_e_matthew_-_7 (1080p).mp4"              -ss 10   -t 5 -vf "fps=fps=20,scale=480:270" -loop 0 -c:v libsvtav1 -preset 5 -svtav1-params fast-decode=1 -b:v 64k -an 8a395124-c6c9-4892-a9b3-9149cef5a1e0.jpg.avif
 ffmpeg -i "./maria_fernanda_e_matthew_-_8 (1080p).mp4"              -ss 0    -t 5 -vf "fps=fps=20,scale=480:270" -loop 0 -c:v libsvtav1 -preset 5 -svtav1-params fast-decode=1 -b:v 64k -an 3a09980c-8d1c-41a4-9dc3-120cd5ae4d66.jpg.avif
-ffmpeg -i "./Video by baccarellielizetecosta [DMmAY7uMPnD].mp4"     -ss 106  -t 5 -vf "fps=fps=20,scale=360:640" -loop 0 -c:v libsvtav1 -preset 5 -svtav1-params fast-decode=1 -b:v 64k -an c3122260-1603-4781-b0bc-e2548e877639.jpg.avif
+ffmpeg -i "./Video by baccarellielizetecosta [DMmAY7uMPnD].mp4"     -ss 108  -t 5 -vf "fps=fps=20,scale=360:640" -loop 0 -c:v libsvtav1 -preset 5 -svtav1-params fast-decode=1 -b:v 64k -an c3122260-1603-4781-b0bc-e2548e877639.jpg.avif
 ffmpeg -i "./Video by baccarellielizetecosta [DMnX8DVM1Mu].mp4"     -ss 11   -t 5 -vf "fps=fps=20,scale=360:640" -loop 0 -c:v libsvtav1 -preset 5 -svtav1-params fast-decode=1 -b:v 64k -an 2e014771-c98b-4d50-b5e3-cc3fa807bb5b.jpg.avif
 ffmpeg -i "./Video by baccarellielizetecosta [DMnZAsosAU2].mp4"     -ss 47   -t 5 -vf "fps=fps=20,scale=360:640" -loop 0 -c:v libsvtav1 -preset 5 -svtav1-params fast-decode=1 -b:v 64k -an 0a0280a6-7712-4ce8-a24d-68679bfa1716.jpg.avif
 ffmpeg -i "./Video by baccarellielizetecosta [DMnaz0EMawX].mp4"     -ss 9    -t 5 -vf "fps=fps=20,scale=360:640" -loop 0 -c:v libsvtav1 -preset 5 -svtav1-params fast-decode=1 -b:v 64k -an 3d954e2a-3eec-4e9f-b6be-5169e28bea7c.jpg.avif
@@ -32,7 +32,7 @@ ffmpeg -i "./maria_fernanda_e_matthew_-_5 (1080p).mp4"              -ss 15.5 -vf
 ffmpeg -i "./maria_fernanda_e_matthew_-_6 (1080p).mp4"              -ss 1    -vf "scale=480:270,select='eq(pict_type,I)'" -frames:v 1 -an 4ce971eb-1c75-4440-b167-ea2d37a22a31.jpg
 ffmpeg -i "./maria_fernanda_e_matthew_-_7 (1080p).mp4"              -ss 10   -vf "scale=480:270,select='eq(pict_type,I)'" -frames:v 1 -an 8a395124-c6c9-4892-a9b3-9149cef5a1e0.jpg
 ffmpeg -i "./maria_fernanda_e_matthew_-_8 (1080p).mp4"              -ss 0    -vf "scale=480:270,select='eq(pict_type,I)'" -frames:v 1 -an 3a09980c-8d1c-41a4-9dc3-120cd5ae4d66.jpg
-ffmpeg -i "./Video by baccarellielizetecosta [DMmAY7uMPnD].mp4"     -ss 106  -vf "scale=360:640,select='eq(pict_type,I)'" -frames:v 1 -an c3122260-1603-4781-b0bc-e2548e877639.jpg
+ffmpeg -i "./Video by baccarellielizetecosta [DMmAY7uMPnD].mp4"     -ss 108  -vf "scale=360:640,select='eq(pict_type,I)'" -frames:v 1 -an c3122260-1603-4781-b0bc-e2548e877639.jpg
 ffmpeg -i "./Video by baccarellielizetecosta [DMnX8DVM1Mu].mp4"     -ss 13   -vf "scale=360:640,select='eq(pict_type,I)'" -frames:v 1 -an 2e014771-c98b-4d50-b5e3-cc3fa807bb5b.jpg
 ffmpeg -i "./Video by baccarellielizetecosta [DMnZAsosAU2].mp4"     -ss 47   -vf "scale=360:640,select='eq(pict_type,I)'" -frames:v 1 -an 0a0280a6-7712-4ce8-a24d-68679bfa1716.jpg
 ffmpeg -i "./Video by baccarellielizetecosta [DMnaz0EMawX].mp4"     -ss 9    -vf "scale=360:640,select='eq(pict_type,I)'" -frames:v 1 -an 3d954e2a-3eec-4e9f-b6be-5169e28bea7c.jpg
