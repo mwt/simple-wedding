@@ -31,3 +31,18 @@ body > header {
     z-index: $num-sections + 1 - $i;
   }
 }
+
+.mm-bounce {
+  animation-name: mm-bounce;
+  animation-delay: 1s;
+  animation-direction: normal;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes mm-bounce {
+  30%  { transform: translateY(0); }
+  40%  { transform: translateY(-20%); }
+  50%  { transform: translateY(0); }
+}
